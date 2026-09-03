@@ -1,0 +1,4584 @@
+{
+  "header": {
+    "id": "401803626",
+    "season": {
+      "year": 2026,
+      "current": true,
+      "type": 2
+    },
+    "competitions": [
+      {
+        "id": "401803626",
+        "date": "2026-04-12T02:00Z",
+        "timeValid": null,
+        "competitors": [
+          {
+            "id": "18",
+            "homeAway": "home",
+            "score": "3",
+            "winner": false,
+            "linescores": [
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "0"
+              }
+            ],
+            "record": [
+              {
+                "type": "total",
+                "summary": "37-34-8",
+                "displayValue": "37-34-8, 82 PTS"
+              },
+              {
+                "type": "home",
+                "summary": "21-14-6",
+                "displayValue": "21-14-6"
+              }
+            ],
+            "team": {
+              "id": "18",
+              "abbreviation": "SJ",
+              "name": "Sharks",
+              "displayName": "San Jose Sharks",
+              "logos": [
+                {
+                  "href": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+                  "width": 500,
+                  "height": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "lastUpdated": "2024-07-02T15:51Z"
+                }
+              ]
+            }
+          },
+          {
+            "id": "22",
+            "homeAway": "away",
+            "score": "4",
+            "winner": true,
+            "linescores": [
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "2"
+              },
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "1"
+              }
+            ],
+            "record": [
+              {
+                "type": "total",
+                "summary": "23-48-8",
+                "displayValue": "23-48-8, 54 PTS"
+              },
+              {
+                "type": "road",
+                "summary": "15-21-3",
+                "displayValue": "15-21-3"
+              }
+            ],
+            "team": {
+              "id": "22",
+              "abbreviation": "VAN",
+              "name": "Canucks",
+              "displayName": "Vancouver Canucks",
+              "logos": [
+                {
+                  "href": "https://a.espncdn.com/i/teamlogos/nhl/500/van.png",
+                  "width": 500,
+                  "height": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "lastUpdated": "2024-07-03T19:59Z"
+                }
+              ]
+            }
+          }
+        ],
+        "status": {
+          "type": {
+            "id": "3",
+            "name": "STATUS_FINAL",
+            "state": "post",
+            "completed": true,
+            "description": "Final",
+            "detail": "Final/SO",
+            "shortDetail": "Final/SO",
+            "altDetail": "SO"
+          },
+          "featuredAthletes": [
+            {
+              "name": "winningGoalie",
+              "displayName": "Winning Goalie",
+              "playerId": 4341584,
+              "athlete": {
+                "id": "4341584",
+                "uid": "s:70~l:90~a:4341584",
+                "guid": "025edf14-dff2-4f5e-8587-b4e3cc0779c9",
+                "fullName": "Kevin Lankinen",
+                "displayName": "Kevin Lankinen",
+                "shortName": "K. Lankinen",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/4341584",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+                  "alt": "Kevin Lankinen"
+                }
+              },
+              "team": {
+                "id": "22",
+                "name": "Canucks",
+                "nickname": "Canucks"
+              }
+            },
+            {
+              "name": "losingGoalie",
+              "displayName": "Losing Goalie",
+              "playerId": 4697394,
+              "athlete": {
+                "id": "4697394",
+                "uid": "s:70~l:90~a:4697394",
+                "guid": "325f23fd-0af8-397c-9a8a-e7034579edba",
+                "fullName": "Yaroslav Askarov",
+                "displayName": "Yaroslav Askarov",
+                "shortName": "Y. Askarov",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/4697394",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+                  "alt": "Yaroslav Askarov"
+                }
+              },
+              "team": {
+                "id": "18",
+                "name": "Sharks",
+                "nickname": "Sharks"
+              }
+            },
+            {
+              "name": "firstStar",
+              "displayName": "First Star",
+              "playerId": 5216907,
+              "athlete": {
+                "id": "5216907",
+                "uid": "s:70~l:90~a:5216907",
+                "guid": "eb72273c-7f45-38ee-9551-dadec75901c7",
+                "fullName": "Igor Chernyshov",
+                "displayName": "Igor Chernyshov",
+                "shortName": "I. Chernyshov",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/5216907",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+                  "alt": "Igor Chernyshov"
+                }
+              },
+              "team": {
+                "id": "18",
+                "name": "Sharks",
+                "nickname": "Sharks"
+              }
+            },
+            {
+              "name": "secondStar",
+              "displayName": "Second Star",
+              "playerId": 5550,
+              "athlete": {
+                "id": "5550",
+                "uid": "s:70~l:90~a:5550",
+                "guid": "9bd243e7-b63b-5894-9206-a12e49cab3a5",
+                "fullName": "Tyler Toffoli",
+                "displayName": "Tyler Toffoli",
+                "shortName": "T. Toffoli",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/5550",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5550.png",
+                  "alt": "Tyler Toffoli"
+                }
+              },
+              "team": {
+                "id": "18",
+                "name": "Sharks",
+                "nickname": "Sharks"
+              }
+            },
+            {
+              "name": "thirdStar",
+              "displayName": "Third Star",
+              "playerId": 3024916,
+              "athlete": {
+                "id": "3024916",
+                "uid": "s:70~l:90~a:3024916",
+                "guid": "3acaf1a1-0423-dfae-1fb3-34906c9d6b1f",
+                "fullName": "Teddy Blueger",
+                "displayName": "Teddy Blueger",
+                "shortName": "T. Blueger",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/3024916",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+                  "alt": "Teddy Blueger"
+                }
+              },
+              "team": {
+                "id": "22",
+                "name": "Canucks",
+                "nickname": "Canucks"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "boxscore": {
+    "players": [
+      {
+        "team": {
+          "id": "22",
+          "abbreviation": "VAN"
+        },
+        "statistics": [
+          {
+            "name": "forwards",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "3024916",
+                  "displayName": "Teddy Blueger",
+                  "shortName": "T. Blueger",
+                  "position": {
+                    "abbreviation": "C"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+                    "alt": "Teddy Blueger"
+                  },
+                  "jersey": "53",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "1",
+                  "0",
+                  "1",
+                  "0",
+                  "16:15",
+                  "0:14",
+                  "2:50",
+                  "13:11",
+                  "23",
+                  "1",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "0",
+                  "8",
+                  "6",
+                  "57.1",
+                  "2",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "3899979",
+                  "displayName": "Brock Boeser",
+                  "shortName": "B. Boeser",
+                  "position": {
+                    "abbreviation": "RW"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899979.png",
+                    "alt": "Brock Boeser"
+                  },
+                  "jersey": "6",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "1",
+                  "0",
+                  "0",
+                  "-2",
+                  "21:30",
+                  "5:17",
+                  "0:51",
+                  "15:22",
+                  "22",
+                  "0",
+                  "22",
+                  "0",
+                  "2",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "1",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "defenses",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "5206642",
+                  "displayName": "Zeev Buium",
+                  "shortName": "Z. Buium",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206642.png",
+                    "alt": "Zeev Buium"
+                  },
+                  "jersey": "24",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "22:52",
+                  "1:21",
+                  "0:00",
+                  "21:31",
+                  "27",
+                  "0",
+                  "5",
+                  "0",
+                  "2",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "4",
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "4063607",
+                  "displayName": "Filip Hronek",
+                  "shortName": "F. Hronek",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4063607.png",
+                    "alt": "Filip Hronek"
+                  },
+                  "jersey": "17",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "1",
+                  "2",
+                  "0",
+                  "-2",
+                  "30:55",
+                  "5:02",
+                  "2:58",
+                  "22:55",
+                  "30",
+                  "0",
+                  "8",
+                  "1",
+                  "6",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "2",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "skaters",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": []
+          },
+          {
+            "name": "goalies",
+            "keys": [
+              "goalsAgainst",
+              "shotsAgainst",
+              "shootoutSaves",
+              "shootoutShotsAgainst",
+              "saves",
+              "savePct",
+              "evenStrengthSaves",
+              "powerPlaySaves",
+              "shortHandedSaves",
+              "timeOnIce",
+              "ytdGoals",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "GA",
+              "SA",
+              "SOS",
+              "SOSA",
+              "SV",
+              "SV%",
+              "ESSV",
+              "PPSV",
+              "SHSV",
+              "TOI",
+              "YTDG",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4341584",
+                  "displayName": "Kevin Lankinen",
+                  "shortName": "K. Lankinen",
+                  "position": {
+                    "abbreviation": "G"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+                    "alt": "Kevin Lankinen"
+                  },
+                  "jersey": "32",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "3",
+                  "32",
+                  "0",
+                  "0",
+                  "29",
+                  ".906",
+                  "28",
+                  "1",
+                  "0",
+                  "64:56",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "team": {
+          "id": "18",
+          "abbreviation": "SJ"
+        },
+        "statistics": [
+          {
+            "name": "forwards",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "5206628",
+                  "displayName": "Macklin Celebrini",
+                  "shortName": "M. Celebrini",
+                  "position": {
+                    "abbreviation": "C"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+                    "alt": "Macklin Celebrini"
+                  },
+                  "jersey": "71",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "2",
+                  "1",
+                  "0",
+                  "2",
+                  "22:14",
+                  "3:19",
+                  "0:03",
+                  "18:52",
+                  "21",
+                  "0",
+                  "44",
+                  "2",
+                  "5",
+                  "0",
+                  "0",
+                  "8",
+                  "10",
+                  "44.4",
+                  "3",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "5216907",
+                  "displayName": "Igor Chernyshov",
+                  "shortName": "I. Chernyshov",
+                  "position": {
+                    "abbreviation": "LW"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+                    "alt": "Igor Chernyshov"
+                  },
+                  "jersey": "92",
+                  "active": false,
+                  "scratched": false
+                },
+                "stats": [
+                  "2",
+                  "0",
+                  "1",
+                  "2",
+                  "17:59",
+                  "0:31",
+                  "0:00",
+                  "17:28",
+                  "20",
+                  "2",
+                  "8",
+                  "0",
+                  "4",
+                  "3",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "1",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "defenses",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4392260",
+                  "displayName": "Vincent Desharnais",
+                  "shortName": "V. Desharnais",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4392260.png",
+                    "alt": "Vincent Desharnais"
+                  },
+                  "jersey": "5",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "5",
+                  "1",
+                  "1",
+                  "22:43",
+                  "0:00",
+                  "4:10",
+                  "18:33",
+                  "21",
+                  "0",
+                  "1",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "5216880",
+                  "displayName": "Sam Dickinson",
+                  "shortName": "S. Dickinson",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216880.png",
+                    "alt": "Sam Dickinson"
+                  },
+                  "jersey": "6",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "2",
+                  "0",
+                  "0",
+                  "17:02",
+                  "0:44",
+                  "0:00",
+                  "16:18",
+                  "17",
+                  "0",
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "skaters",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": []
+          },
+          {
+            "name": "goalies",
+            "keys": [
+              "goalsAgainst",
+              "shotsAgainst",
+              "shootoutSaves",
+              "shootoutShotsAgainst",
+              "saves",
+              "savePct",
+              "evenStrengthSaves",
+              "powerPlaySaves",
+              "shortHandedSaves",
+              "timeOnIce",
+              "ytdGoals",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "GA",
+              "SA",
+              "SOS",
+              "SOSA",
+              "SV",
+              "SV%",
+              "ESSV",
+              "PPSV",
+              "SHSV",
+              "TOI",
+              "YTDG",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4697394",
+                  "displayName": "Yaroslav Askarov",
+                  "shortName": "Y. Askarov",
+                  "position": {
+                    "abbreviation": "G"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+                    "alt": "Yaroslav Askarov"
+                  },
+                  "jersey": "30",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "3",
+                  "41",
+                  "0",
+                  "0",
+                  "38",
+                  ".927",
+                  "28",
+                  "9",
+                  "1",
+                  "65:00",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "homeAway": "away",
+        "team": {
+          "id": "22",
+          "abbreviation": "VAN"
+        },
+        "statistics": [
+          {
+            "name": "blockedShots",
+            "abbreviation": "BS",
+            "displayValue": "12",
+            "label": "Blocked Shots"
+          },
+          {
+            "name": "hits",
+            "abbreviation": "HT",
+            "displayValue": "18",
+            "label": "Hits"
+          },
+          {
+            "name": "takeaways",
+            "abbreviation": "TK",
+            "displayValue": "3",
+            "label": "Takeaways"
+          },
+          {
+            "name": "shotsTotal",
+            "abbreviation": "S",
+            "displayValue": "41",
+            "label": "Shots"
+          },
+          {
+            "name": "powerPlayGoals",
+            "abbreviation": "PPG",
+            "displayValue": "2",
+            "label": "Power Play Goals"
+          },
+          {
+            "name": "powerPlayOpportunities",
+            "abbreviation": "PPO",
+            "displayValue": "4",
+            "label": "Power Play Opportunities"
+          },
+          {
+            "name": "powerPlayPct",
+            "abbreviation": "PCT",
+            "displayValue": "50.0",
+            "label": "Power Play Percentage"
+          },
+          {
+            "name": "shortHandedGoals",
+            "abbreviation": "SHG",
+            "displayValue": "0",
+            "label": "Short Handed Goals"
+          },
+          {
+            "name": "shootoutGoals",
+            "abbreviation": "SOG",
+            "displayValue": "0",
+            "label": "Shootout Goals"
+          },
+          {
+            "name": "faceoffsWon",
+            "abbreviation": "FW",
+            "displayValue": "33",
+            "label": "Faceoffs Won"
+          },
+          {
+            "name": "faceoffPercent",
+            "abbreviation": "FO%",
+            "displayValue": "56.9",
+            "label": "Faceoff Win Percent"
+          },
+          {
+            "name": "giveaways",
+            "abbreviation": "GV",
+            "displayValue": "20",
+            "label": "Giveaways"
+          },
+          {
+            "name": "penalties",
+            "abbreviation": "PN",
+            "displayValue": "2",
+            "label": "Total Penalties"
+          },
+          {
+            "name": "penaltyMinutes",
+            "abbreviation": "PIM",
+            "displayValue": "4",
+            "label": "Penalty Minutes"
+          }
+        ]
+      },
+      {
+        "homeAway": "home",
+        "team": {
+          "id": "18",
+          "abbreviation": "SJ"
+        },
+        "statistics": [
+          {
+            "name": "blockedShots",
+            "abbreviation": "BS",
+            "displayValue": "13",
+            "label": "Blocked Shots"
+          },
+          {
+            "name": "hits",
+            "abbreviation": "HT",
+            "displayValue": "28",
+            "label": "Hits"
+          },
+          {
+            "name": "takeaways",
+            "abbreviation": "TK",
+            "displayValue": "4",
+            "label": "Takeaways"
+          },
+          {
+            "name": "shotsTotal",
+            "abbreviation": "S",
+            "displayValue": "32",
+            "label": "Shots"
+          },
+          {
+            "name": "powerPlayGoals",
+            "abbreviation": "PPG",
+            "displayValue": "0",
+            "label": "Power Play Goals"
+          },
+          {
+            "name": "powerPlayOpportunities",
+            "abbreviation": "PPO",
+            "displayValue": "2",
+            "label": "Power Play Opportunities"
+          },
+          {
+            "name": "powerPlayPct",
+            "abbreviation": "PCT",
+            "displayValue": "0.0",
+            "label": "Power Play Percentage"
+          },
+          {
+            "name": "shortHandedGoals",
+            "abbreviation": "SHG",
+            "displayValue": "0",
+            "label": "Short Handed Goals"
+          },
+          {
+            "name": "shootoutGoals",
+            "abbreviation": "SOG",
+            "displayValue": "0",
+            "label": "Shootout Goals"
+          },
+          {
+            "name": "faceoffsWon",
+            "abbreviation": "FW",
+            "displayValue": "25",
+            "label": "Faceoffs Won"
+          },
+          {
+            "name": "faceoffPercent",
+            "abbreviation": "FO%",
+            "displayValue": "43.1",
+            "label": "Faceoff Win Percent"
+          },
+          {
+            "name": "giveaways",
+            "abbreviation": "GV",
+            "displayValue": "17",
+            "label": "Giveaways"
+          },
+          {
+            "name": "penalties",
+            "abbreviation": "PN",
+            "displayValue": "4",
+            "label": "Total Penalties"
+          },
+          {
+            "name": "penaltyMinutes",
+            "abbreviation": "PIM",
+            "displayValue": "8",
+            "label": "Penalty Minutes"
+          }
+        ]
+      }
+    ]
+  },
+  "plays": [
+    {
+      "id": "401803626000000520",
+      "sequenceNumber": "2",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 1st Period",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T02:15:24Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000000570",
+      "sequenceNumber": "6",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Brock Boeser Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "0:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3899979",
+            "displayName": "Brock Boeser",
+            "shortName": "B. Boeser",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899979.png",
+              "alt": "Brock Boeser"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 21
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T02:16:05Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -29,
+        "y": -8
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000000590",
+      "sequenceNumber": "8",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Igor Chernyshov Wrist Shot saved by Kevin Lankinen",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "0:39"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5216907",
+            "displayName": "Igor Chernyshov",
+            "shortName": "I. Chernyshov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+              "alt": "Igor Chernyshov"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 5
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T02:16:25Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 74,
+        "y": 13
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000003090",
+      "sequenceNumber": "76",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Igor Chernyshov Goal (6) Backhand, assists: Macklin Celebrini (67)",
+      "awayScore": 0,
+      "homeScore": 1,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "16:19"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5216907",
+            "displayName": "Igor Chernyshov",
+            "shortName": "I. Chernyshov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+              "alt": "Igor Chernyshov"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 6
+        },
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 67
+        }
+      ],
+      "wallclock": "2026-04-12T02:43:34Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 84,
+        "y": -1
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000000220",
+      "sequenceNumber": "99",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 1st Period",
+      "awayScore": 0,
+      "homeScore": 1,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T02:49:30Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000003690",
+      "sequenceNumber": "102",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 2nd Period",
+      "awayScore": 0,
+      "homeScore": 1,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T03:09:07Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000005390",
+      "sequenceNumber": "132",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Marco Rossi Goal (11) Wrist Shot, assists: Victor Mancini (3)",
+      "awayScore": 1,
+      "homeScore": 1,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "5:56"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4697391",
+            "displayName": "Marco Rossi",
+            "shortName": "M. Rossi",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697391.png",
+              "alt": "Marco Rossi"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 11
+        },
+        {
+          "athlete": {
+            "id": "5188334",
+            "displayName": "Victor Mancini",
+            "shortName": "V. Mancini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5188334.png",
+              "alt": "Victor Mancini"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 3
+        }
+      ],
+      "wallclock": "2026-04-12T03:17:11Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 81,
+        "y": 13
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000005790",
+      "sequenceNumber": "150",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Tyler Toffoli Goal (19) Wrist Shot, assists: Sam Dickinson (13), Michael Misa (11)",
+      "awayScore": 1,
+      "homeScore": 2,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "9:02"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5550",
+            "displayName": "Tyler Toffoli",
+            "shortName": "T. Toffoli",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5550.png",
+              "alt": "Tyler Toffoli"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 19
+        },
+        {
+          "athlete": {
+            "id": "5216880",
+            "displayName": "Sam Dickinson",
+            "shortName": "S. Dickinson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216880.png",
+              "alt": "Sam Dickinson"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 13
+        },
+        {
+          "athlete": {
+            "id": "5291934",
+            "displayName": "Michael Misa",
+            "shortName": "M. Misa",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5291934.png",
+              "alt": "Michael Misa"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 11
+        }
+      ],
+      "wallclock": "2026-04-12T03:24:14Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": -45,
+        "y": -30
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001050",
+      "sequenceNumber": "196",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Jake DeBrusk Goal (20) Wrist Shot, assists: Filip Hronek (39), Elias Pettersson (34)",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "17:37"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3900240",
+            "displayName": "Jake DeBrusk",
+            "shortName": "J. DeBrusk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+              "alt": "Jake DeBrusk"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "4063607",
+            "displayName": "Filip Hronek",
+            "shortName": "F. Hronek",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4063607.png",
+              "alt": "Filip Hronek"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 39
+        },
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 34
+        }
+      ],
+      "wallclock": "2026-04-12T03:40:37Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 81,
+        "y": 1
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000000450",
+      "sequenceNumber": "207",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 2nd Period",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T03:46:28Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000004020",
+      "sequenceNumber": "210",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 3rd Period",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:05:31Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000009240",
+      "sequenceNumber": "277",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Igor Chernyshov Goal (7) Wrist Shot, assists: Macklin Celebrini (68), Dmitry Orlov (33)",
+      "awayScore": 2,
+      "homeScore": 3,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "12:44"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5216907",
+            "displayName": "Igor Chernyshov",
+            "shortName": "I. Chernyshov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+              "alt": "Igor Chernyshov"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 7
+        },
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 68
+        },
+        {
+          "athlete": {
+            "id": "5646",
+            "displayName": "Dmitry Orlov",
+            "shortName": "D. Orlov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5646.png",
+              "alt": "Dmitry Orlov"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 33
+        }
+      ],
+      "wallclock": "2026-04-12T04:26:50Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 70,
+        "y": 10
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000009760",
+      "sequenceNumber": "301",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Teddy Blueger Goal (9) Wrist Shot, assists: Linus Karlsson (20)",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "17:00"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3024916",
+            "displayName": "Teddy Blueger",
+            "shortName": "T. Blueger",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+              "alt": "Teddy Blueger"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 9
+        },
+        {
+          "athlete": {
+            "id": "4587713",
+            "displayName": "Linus Karlsson",
+            "shortName": "L. Karlsson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587713.png",
+              "alt": "Linus Karlsson"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 20
+        }
+      ],
+      "wallclock": "2026-04-12T04:36:21Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": -67,
+        "y": 6
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000004200",
+      "sequenceNumber": "310",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 3rd Period",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:40:47Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010280",
+      "sequenceNumber": "313",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of Overtime",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:43:24Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010270",
+      "sequenceNumber": "314",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Elias Pettersson faceoff won against Macklin Celebrini",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 15
+        },
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "ytdAssists": 68
+        }
+      ],
+      "wallclock": "2026-04-12T04:43:25Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010300",
+      "sequenceNumber": "315",
+      "type": {
+        "id": "507",
+        "text": "Missed",
+        "abbreviation": "shot-missed"
+      },
+      "text": "Jake DeBrusk Wrist Shot Wide Right",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:30"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3900240",
+            "displayName": "Jake DeBrusk",
+            "shortName": "J. DeBrusk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+              "alt": "Jake DeBrusk"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:43:55Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 56,
+        "y": 16
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010320",
+      "sequenceNumber": "316",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Elias Pettersson Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:49"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 15
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:44:14Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 69,
+        "y": 10
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001090",
+      "sequenceNumber": "317",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Elias Pettersson Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:51"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 15
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:44:16Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 89,
+        "y": 20
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000004250",
+      "sequenceNumber": "318",
+      "type": {
+        "id": "516",
+        "text": "Stoppage",
+        "abbreviation": "stoppage"
+      },
+      "text": "Goalie Stopped",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:52"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:44:16Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 85,
+        "y": 0
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010330",
+      "sequenceNumber": "319",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Marco Rossi faceoff won against Zack Ostapchuk",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:52"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4697391",
+            "displayName": "Marco Rossi",
+            "shortName": "M. Rossi",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697391.png",
+              "alt": "Marco Rossi"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 11
+        },
+        {
+          "athlete": {
+            "id": "4874881",
+            "displayName": "Zack Ostapchuk",
+            "shortName": "Z. Ostapchuk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874881.png",
+              "alt": "Zack Ostapchuk"
+            }
+          },
+          "ytdAssists": 3
+        }
+      ],
+      "wallclock": "2026-04-12T04:44:53Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 69,
+        "y": 22
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010410",
+      "sequenceNumber": "320",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Jake DeBrusk Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:07"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3900240",
+            "displayName": "Jake DeBrusk",
+            "shortName": "J. DeBrusk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+              "alt": "Jake DeBrusk"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:46:08Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 56,
+        "y": 10
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010490",
+      "sequenceNumber": "321",
+      "type": {
+        "id": "1402",
+        "text": "Giveaway",
+        "abbreviation": "giveaway"
+      },
+      "text": "Giveaway by Liam Ohgren",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5080163",
+            "displayName": "Liam Ohgren",
+            "shortName": "L. Ohgren",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5080163.png",
+              "alt": "Liam Ohgren"
+            }
+          },
+          "type": "giver",
+          "ytdGoals": 8
+        }
+      ],
+      "wallclock": "2026-04-12T04:46:20Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 14,
+        "y": -31
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010440",
+      "sequenceNumber": "322",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Macklin Celebrini Wrist Shot saved by Kevin Lankinen",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:23"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 42
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:46:24Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -75,
+        "y": -9
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010540",
+      "sequenceNumber": "323",
+      "type": {
+        "id": "503",
+        "text": "Hit",
+        "abbreviation": "hit"
+      },
+      "text": "Macklin Celebrini hit Tom Willander",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:29"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "hit-credited",
+          "ytdGoals": 42
+        },
+        {
+          "athlete": {
+            "id": "5149180",
+            "displayName": "Tom Willander",
+            "shortName": "T. Willander",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149180.png",
+              "alt": "Tom Willander"
+            }
+          },
+          "type": "hitted",
+          "ytdAssists": 15
+        }
+      ],
+      "wallclock": "2026-04-12T04:46:30Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -35,
+        "y": -37
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010500",
+      "sequenceNumber": "324",
+      "type": {
+        "id": "55",
+        "text": "Tripping",
+        "abbreviation": "Tripping",
+        "penaltyMinutes": "2",
+        "penaltyType": "Minor"
+      },
+      "text": "Jake DeBrusk Tripping against Alexander Wennberg",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:43"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3900240",
+            "displayName": "Jake DeBrusk",
+            "shortName": "J. DeBrusk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+              "alt": "Jake DeBrusk"
+            }
+          },
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "ytdAssists": 36
+        }
+      ],
+      "wallclock": "2026-04-12T04:46:44Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -65,
+        "y": -36
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010460",
+      "sequenceNumber": "325",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Alexander Wennberg faceoff won against Teddy Blueger",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "2:43"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 18
+        },
+        {
+          "athlete": {
+            "id": "3024916",
+            "displayName": "Teddy Blueger",
+            "shortName": "T. Blueger",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+              "alt": "Teddy Blueger"
+            }
+          },
+          "ytdAssists": 8
+        }
+      ],
+      "wallclock": "2026-04-12T04:47:45Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -69,
+        "y": -22
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000004270",
+      "sequenceNumber": "326",
+      "type": {
+        "id": "516",
+        "text": "Stoppage",
+        "abbreviation": "stoppage"
+      },
+      "text": "Puck in Netting",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "3:16"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:48:18Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -94,
+        "y": 27
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000010560",
+      "sequenceNumber": "327",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Teddy Blueger faceoff won against Alexander Wennberg",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "3:16"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3024916",
+            "displayName": "Teddy Blueger",
+            "shortName": "T. Blueger",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+              "alt": "Teddy Blueger"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 9
+        },
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "ytdAssists": 36
+        }
+      ],
+      "wallclock": "2026-04-12T04:49:51Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -69,
+        "y": 22
+      },
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000010580",
+      "sequenceNumber": "328",
+      "type": {
+        "id": "508",
+        "text": "Blocked",
+        "abbreviation": "shot-blocked"
+      },
+      "text": "Will Smith shot blocked by Marcus Pettersson",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "3:43"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5149155",
+            "displayName": "Will Smith",
+            "shortName": "W. Smith",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149155.png",
+              "alt": "Will Smith"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 23
+        },
+        {
+          "athlete": {
+            "id": "3114995",
+            "displayName": "Marcus Pettersson",
+            "shortName": "M. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114995.png",
+              "alt": "Marcus Pettersson"
+            }
+          },
+          "type": "defender",
+          "ytdAssists": 15
+        }
+      ],
+      "wallclock": "2026-04-12T04:50:18Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -75,
+        "y": -13
+      },
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000010590",
+      "sequenceNumber": "329",
+      "type": {
+        "id": "508",
+        "text": "Blocked",
+        "abbreviation": "shot-blocked"
+      },
+      "text": "Macklin Celebrini shot blocked by Alexander Wennberg",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:03"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 42
+        },
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "type": "defender",
+          "ytdAssists": 36
+        }
+      ],
+      "wallclock": "2026-04-12T04:50:38Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -82,
+        "y": 0
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000006060",
+      "sequenceNumber": "330",
+      "type": {
+        "id": "508",
+        "text": "Blocked",
+        "abbreviation": "shot-blocked"
+      },
+      "text": "Will Smith shot blocked by Marcus Pettersson",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:18"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5149155",
+            "displayName": "Will Smith",
+            "shortName": "W. Smith",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149155.png",
+              "alt": "Will Smith"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 23
+        },
+        {
+          "athlete": {
+            "id": "3114995",
+            "displayName": "Marcus Pettersson",
+            "shortName": "M. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114995.png",
+              "alt": "Marcus Pettersson"
+            }
+          },
+          "type": "defender",
+          "ytdAssists": 15
+        }
+      ],
+      "wallclock": "2026-04-12T04:50:53Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -82,
+        "y": -7
+      },
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000004290",
+      "sequenceNumber": "331",
+      "type": {
+        "id": "516",
+        "text": "Stoppage",
+        "abbreviation": "stoppage"
+      },
+      "text": "Puck in Netting",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:50:55Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -97,
+        "y": -2
+      },
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000010630",
+      "sequenceNumber": "332",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Alexander Wennberg faceoff won against Elias Pettersson",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 18
+        },
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "ytdAssists": 34
+        }
+      ],
+      "wallclock": "2026-04-12T04:51:30Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -69,
+        "y": -22
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000010660",
+      "sequenceNumber": "333",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "William Eklund Wrist Shot saved by Kevin Lankinen",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:26"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4874721",
+            "displayName": "William Eklund",
+            "shortName": "W. Eklund",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874721.png",
+              "alt": "William Eklund"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 14
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:51:36Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -79,
+        "y": 20
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000010710",
+      "sequenceNumber": "334",
+      "type": {
+        "id": "37",
+        "text": "Interference",
+        "abbreviation": "Interference",
+        "penaltyMinutes": "2",
+        "penaltyType": "Minor"
+      },
+      "text": "William Eklund Interference against Filip Hronek",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:32"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4874721",
+            "displayName": "William Eklund",
+            "shortName": "W. Eklund",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874721.png",
+              "alt": "William Eklund"
+            }
+          },
+          "ytdGoals": 14
+        },
+        {
+          "athlete": {
+            "id": "4063607",
+            "displayName": "Filip Hronek",
+            "shortName": "F. Hronek",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4063607.png",
+              "alt": "Filip Hronek"
+            }
+          },
+          "ytdAssists": 39
+        }
+      ],
+      "wallclock": "2026-04-12T04:51:42Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -84,
+        "y": 22
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000004300",
+      "sequenceNumber": "335",
+      "type": {
+        "id": "516",
+        "text": "Stoppage",
+        "abbreviation": "stoppage"
+      },
+      "text": "Timeout - Visitor",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:32"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:51:42Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 13,
+        "y": 41
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803626000010670",
+      "sequenceNumber": "336",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Aatu Räty faceoff won against Alexander Wennberg",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:32"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4874912",
+            "displayName": "Aatu Raty",
+            "shortName": "A. Raty",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874912.png",
+              "alt": "Aatu Raty"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 4
+        },
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "ytdAssists": 36
+        }
+      ],
+      "wallclock": "2026-04-12T04:53:34Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 69,
+        "y": 22
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000010760",
+      "sequenceNumber": "337",
+      "type": {
+        "id": "508",
+        "text": "Blocked",
+        "abbreviation": "shot-blocked"
+      },
+      "text": "Brock Boeser shot blocked by Alexander Wennberg",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "4:49"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3899979",
+            "displayName": "Brock Boeser",
+            "shortName": "B. Boeser",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899979.png",
+              "alt": "Brock Boeser"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 21
+        },
+        {
+          "athlete": {
+            "id": "3042017",
+            "displayName": "Alexander Wennberg",
+            "shortName": "A. Wennberg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042017.png",
+              "alt": "Alexander Wennberg"
+            }
+          },
+          "type": "defender",
+          "ytdAssists": 36
+        }
+      ],
+      "wallclock": "2026-04-12T04:53:51Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 56,
+        "y": 4
+      },
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000004310",
+      "sequenceNumber": "338",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of OT",
+      "awayScore": 3,
+      "homeScore": 3,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "5:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:54:02Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000004360",
+      "sequenceNumber": "341",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of Shootout",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "wallclock": "2026-04-12T04:54:36Z",
+      "shootingPlay": false,
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803626000006070",
+      "sequenceNumber": "342",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Igor Chernyshov Backhand saved by Kevin Lankinen",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5216907",
+            "displayName": "Igor Chernyshov",
+            "shortName": "I. Chernyshov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+              "alt": "Igor Chernyshov"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 7
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:55:52Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 81,
+        "y": 3
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001100",
+      "sequenceNumber": "343",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Filip Hronek Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:01Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4063607",
+            "displayName": "Filip Hronek",
+            "shortName": "F. Hronek",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4063607.png",
+              "alt": "Filip Hronek"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 8
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:56:12Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -79,
+        "y": 2
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000006080",
+      "sequenceNumber": "344",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Macklin Celebrini Goal Wrist Shot",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5206628",
+            "displayName": "Macklin Celebrini",
+            "shortName": "M. Celebrini",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+              "alt": "Macklin Celebrini"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 42
+        }
+      ],
+      "wallclock": "2026-04-12T04:56:39Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "905",
+        "text": "Shootout"
+      },
+      "coordinate": {
+        "x": 71,
+        "y": -1
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001110",
+      "sequenceNumber": "345",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Jake DeBrusk Goal Wrist Shot",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3900240",
+            "displayName": "Jake DeBrusk",
+            "shortName": "J. DeBrusk",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+              "alt": "Jake DeBrusk"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 20
+        }
+      ],
+      "wallclock": "2026-04-12T04:57:10Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "905",
+        "text": "Shootout"
+      },
+      "coordinate": {
+        "x": -75,
+        "y": -5
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000006090",
+      "sequenceNumber": "346",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Collin Graf Wrist Shot saved by Kevin Lankinen",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5136607",
+            "displayName": "Collin Graf",
+            "shortName": "C. Graf",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5136607.png",
+              "alt": "Collin Graf"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:57:42Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 78,
+        "y": 0
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001140",
+      "sequenceNumber": "347",
+      "type": {
+        "id": "507",
+        "text": "Missed",
+        "abbreviation": "shot-missed"
+      },
+      "text": "Liam Ohgren Wrist Shot Above Crossbar",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5080163",
+            "displayName": "Liam Ohgren",
+            "shortName": "L. Ohgren",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5080163.png",
+              "alt": "Liam Ohgren"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 8
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:58:12Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -77,
+        "y": -9
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000006100",
+      "sequenceNumber": "348",
+      "type": {
+        "id": "507",
+        "text": "Missed",
+        "abbreviation": "shot-missed"
+      },
+      "text": "Will Smith Wrist Shot Wide Right",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5149155",
+            "displayName": "Will Smith",
+            "shortName": "W. Smith",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149155.png",
+              "alt": "Will Smith"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 23
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:58:54Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 81,
+        "y": -5
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001150",
+      "sequenceNumber": "349",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Brock Boeser Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3899979",
+            "displayName": "Brock Boeser",
+            "shortName": "B. Boeser",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899979.png",
+              "alt": "Brock Boeser"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 21
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T04:59:26Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -77,
+        "y": 3
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000006110",
+      "sequenceNumber": "350",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Adam Gaudette Backhand saved by Kevin Lankinen",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3942868",
+            "displayName": "Adam Gaudette",
+            "shortName": "A. Gaudette",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3942868.png",
+              "alt": "Adam Gaudette"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 17
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T04:59:59Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 82,
+        "y": 2
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001160",
+      "sequenceNumber": "351",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Elias Pettersson Wrist Shot saved by Yaroslav Askarov",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4233566",
+            "displayName": "Elias Pettersson",
+            "shortName": "E. Pettersson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233566.png",
+              "alt": "Elias Pettersson"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 15
+        },
+        {
+          "athlete": {
+            "id": "4697394",
+            "displayName": "Yaroslav Askarov",
+            "shortName": "Y. Askarov",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697394.png",
+              "alt": "Yaroslav Askarov"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T05:00:22Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -80,
+        "y": 0
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000006120",
+      "sequenceNumber": "352",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "William Eklund Wrist Shot saved by Kevin Lankinen",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "18"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4874721",
+            "displayName": "William Eklund",
+            "shortName": "W. Eklund",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874721.png",
+              "alt": "William Eklund"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 14
+        },
+        {
+          "athlete": {
+            "id": "4341584",
+            "displayName": "Kevin Lankinen",
+            "shortName": "K. Lankinen",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4341584.png",
+              "alt": "Kevin Lankinen"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 1
+        }
+      ],
+      "wallclock": "2026-04-12T05:00:55Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 71,
+        "y": 1
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000001170",
+      "sequenceNumber": "353",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Linus Karlsson Goal Wrist Shot",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-14T16:02Z",
+      "team": {
+        "id": "22"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4587713",
+            "displayName": "Linus Karlsson",
+            "shortName": "L. Karlsson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587713.png",
+              "alt": "Linus Karlsson"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 15
+        }
+      ],
+      "wallclock": "2026-04-12T05:01:24Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "905",
+        "text": "Shootout"
+      },
+      "coordinate": {
+        "x": -71,
+        "y": 5
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000004410",
+      "sequenceNumber": "354",
+      "type": {
+        "id": "521",
+        "text": "Shootout End",
+        "abbreviation": "shootout-end"
+      },
+      "text": "End of Shootout",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "wallclock": "2026-04-12T05:01:24Z",
+      "shootingPlay": false,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000004370",
+      "sequenceNumber": "355",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of OT",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "wallclock": "2026-04-12T05:01:24Z",
+      "shootingPlay": false,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803626000004420",
+      "sequenceNumber": "357",
+      "type": {
+        "id": "522",
+        "text": "End of Game"
+      },
+      "text": "Game End",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 5,
+        "displayValue": "SO"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-14T16:02Z",
+      "wallclock": "2026-04-12T05:01:49Z",
+      "shootingPlay": false,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    }
+  ],
+  "onIce": [
+    {
+      "entries": [
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/18/roster/3042017/projections?lang=en&region=us"
+          },
+          "athleteid": "3042017"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/18/roster/4392260/projections?lang=en&region=us"
+          },
+          "athleteid": "4392260"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/18/roster/4697394/projections?lang=en&region=us"
+          },
+          "athleteid": "4697394"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/18/roster/4233884/projections?lang=en&region=us"
+          },
+          "athleteid": "4233884"
+        }
+      ],
+      "teamId": "18"
+    },
+    {
+      "entries": [
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/22/roster/3900240/projections?lang=en&region=us"
+          },
+          "athleteid": "3900240"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/22/roster/4063607/projections?lang=en&region=us"
+          },
+          "athleteid": "4063607"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/22/roster/4233566/projections?lang=en&region=us"
+          },
+          "athleteid": "4233566"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/22/roster/4341584/projections?lang=en&region=us"
+          },
+          "athleteid": "4341584"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803626/competitions/401803626/competitors/22/roster/3899979/projections?lang=en&region=us"
+          },
+          "athleteid": "3899979"
+        }
+      ],
+      "teamId": "22"
+    }
+  ],
+  "leaders": [
+    {
+      "team": {
+        "id": "18",
+        "abbreviation": "SJ"
+      },
+      "leaders": [
+        {
+          "name": "goals",
+          "displayName": "Goals",
+          "leaders": [
+            {
+              "displayValue": "2",
+              "value": 2,
+              "athlete": {
+                "id": "5216907",
+                "displayName": "Igor Chernyshov",
+                "shortName": "I. Chernyshov",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+                  "alt": "Igor Chernyshov"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "assists",
+          "displayName": "Assists",
+          "leaders": [
+            {
+              "displayValue": "2",
+              "value": 2,
+              "athlete": {
+                "id": "5206628",
+                "displayName": "Macklin Celebrini",
+                "shortName": "M. Celebrini",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5206628.png",
+                  "alt": "Macklin Celebrini"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "points",
+          "displayName": "Points",
+          "leaders": [
+            {
+              "displayValue": "2",
+              "value": 2,
+              "athlete": {
+                "id": "5216907",
+                "displayName": "Igor Chernyshov",
+                "shortName": "I. Chernyshov",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5216907.png",
+                  "alt": "Igor Chernyshov"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": "22",
+        "abbreviation": "VAN"
+      },
+      "leaders": [
+        {
+          "name": "goals",
+          "displayName": "Goals",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "3900240",
+                "displayName": "Jake DeBrusk",
+                "shortName": "J. DeBrusk",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+                  "alt": "Jake DeBrusk"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "assists",
+          "displayName": "Assists",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "5188334",
+                "displayName": "Victor Mancini",
+                "shortName": "V. Mancini",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5188334.png",
+                  "alt": "Victor Mancini"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "points",
+          "displayName": "Points",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "3900240",
+                "displayName": "Jake DeBrusk",
+                "shortName": "J. DeBrusk",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3900240.png",
+                  "alt": "Jake DeBrusk"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

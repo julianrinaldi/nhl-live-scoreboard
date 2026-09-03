@@ -1,0 +1,35 @@
+{
+  "athlete": {
+    "id": "3151297",
+    "displayName": "Igor Shesterkin",
+    "fullName": "Igor Shesterkin",
+    "displayHeight": "6' 1\"",
+    "displayWeight": "195 lbs",
+    "displayDraft": "2014: Rd 4, Pk 118 (NYR)",
+    "displayExperience": "7th Season",
+    "displayBirthPlace": "Moscow, RUS",
+    "displayDOB": "12/30/1995",
+    "displayDebut": null,
+    "position": {
+      "id": "5",
+      "name": "Goaltender",
+      "displayName": "Goaltender",
+      "abbreviation": "G",
+      "leaf": false,
+      "slug": "goaltender"
+    },
+    "age": 30,
+    "jersey": "31",
+    "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3151297.png",
+      "alt": "Igor Shesterkin"
+    },
+    "shoots": null,
+    "catches": null,
+    "team": {
+      "id": "13",
+      "abbreviation": "NYR",
+      "displayName": "New York Rangers"
+    }
+  }
+}

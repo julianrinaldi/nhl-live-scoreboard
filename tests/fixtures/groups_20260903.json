@@ -1,0 +1,168 @@
+{
+  "groups": [
+    {
+      "id": null,
+      "name": "Eastern Conference",
+      "children": [
+        {
+          "id": null,
+          "name": "Atlantic Division",
+          "teams": [
+            {
+              "id": "1",
+              "abbreviation": "BOS"
+            },
+            {
+              "id": "2",
+              "abbreviation": "BUF"
+            },
+            {
+              "id": "5",
+              "abbreviation": "DET"
+            },
+            {
+              "id": "10",
+              "abbreviation": "MTL"
+            },
+            {
+              "id": "14",
+              "abbreviation": "OTT"
+            },
+            {
+              "id": "20",
+              "abbreviation": "TB"
+            },
+            {
+              "id": "21",
+              "abbreviation": "TOR"
+            },
+            {
+              "id": "26",
+              "abbreviation": "FLA"
+            }
+          ]
+        },
+        {
+          "id": null,
+          "name": "Metropolitan Division",
+          "teams": [
+            {
+              "id": "7",
+              "abbreviation": "CAR"
+            },
+            {
+              "id": "11",
+              "abbreviation": "NJ"
+            },
+            {
+              "id": "12",
+              "abbreviation": "NYI"
+            },
+            {
+              "id": "13",
+              "abbreviation": "NYR"
+            },
+            {
+              "id": "15",
+              "abbreviation": "PHI"
+            },
+            {
+              "id": "16",
+              "abbreviation": "PIT"
+            },
+            {
+              "id": "23",
+              "abbreviation": "WSH"
+            },
+            {
+              "id": "29",
+              "abbreviation": "CBJ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "Western Conference",
+      "children": [
+        {
+          "id": null,
+          "name": "Central Division",
+          "teams": [
+            {
+              "id": "4",
+              "abbreviation": "CHI"
+            },
+            {
+              "id": "9",
+              "abbreviation": "DAL"
+            },
+            {
+              "id": "17",
+              "abbreviation": "COL"
+            },
+            {
+              "id": "19",
+              "abbreviation": "STL"
+            },
+            {
+              "id": "27",
+              "abbreviation": "NSH"
+            },
+            {
+              "id": "28",
+              "abbreviation": "WPG"
+            },
+            {
+              "id": "30",
+              "abbreviation": "MIN"
+            },
+            {
+              "id": "129764",
+              "abbreviation": "UTA"
+            }
+          ]
+        },
+        {
+          "id": null,
+          "name": "Pacific Division",
+          "teams": [
+            {
+              "id": "3",
+              "abbreviation": "CGY"
+            },
+            {
+              "id": "6",
+              "abbreviation": "EDM"
+            },
+            {
+              "id": "8",
+              "abbreviation": "LA"
+            },
+            {
+              "id": "18",
+              "abbreviation": "SJ"
+            },
+            {
+              "id": "22",
+              "abbreviation": "VAN"
+            },
+            {
+              "id": "25",
+              "abbreviation": "ANA"
+            },
+            {
+              "id": "37",
+              "abbreviation": "VGK"
+            },
+            {
+              "id": "124292",
+              "abbreviation": "SEA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

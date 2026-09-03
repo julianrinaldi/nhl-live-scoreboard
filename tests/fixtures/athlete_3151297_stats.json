@@ -1,0 +1,163 @@
+{
+  "categories": [
+    {
+      "name": "goaltender",
+      "displayName": "Regular Season ",
+      "labels": [
+        "GP",
+        "GS",
+        "TOI/G",
+        "WINS",
+        "L",
+        "T",
+        "OTL",
+        "GA",
+        "GAA",
+        "SA",
+        "SV",
+        "SV%",
+        "SO"
+      ],
+      "names": [
+        "games",
+        "gameStarted",
+        "timeOnIcePerGame",
+        "wins",
+        "losses",
+        "ties",
+        "overtimeLosses",
+        "goalsAgainst",
+        "avgGoalsAgainst",
+        "shotsAgainst",
+        "saves",
+        "savePct",
+        "shutouts"
+      ],
+      "statistics": [
+        {
+          "teamId": "13",
+          "teamSlug": "new-york-rangers",
+          "season": {
+            "year": 2025,
+            "displayName": "24-25"
+          },
+          "stats": [
+            "61",
+            "61",
+            "57:27",
+            "27",
+            "29",
+            "0",
+            "5",
+            "167",
+            "2.86",
+            "1751",
+            "1584",
+            ".905",
+            "6"
+          ],
+          "position": "G"
+        },
+        {
+          "teamId": "13",
+          "teamSlug": "new-york-rangers",
+          "season": {
+            "year": 2026,
+            "displayName": "25-26"
+          },
+          "stats": [
+            "51",
+            "51",
+            "59:17",
+            "25",
+            "19",
+            "0",
+            "6",
+            "126",
+            "2.50",
+            "1425",
+            "1299",
+            ".912",
+            "1"
+          ],
+          "position": "G"
+        }
+      ],
+      "totals": [
+        "325",
+        "320",
+        "58:19",
+        "187",
+        "107",
+        "0",
+        "28",
+        "796",
+        "2.52",
+        "9535",
+        "8740",
+        ".917",
+        "22"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "abbreviation": "GA",
+      "displayName": "Goals Against"
+    },
+    {
+      "abbreviation": "GAA",
+      "displayName": "Goals Against Average"
+    },
+    {
+      "abbreviation": "GP",
+      "displayName": "Games Played"
+    },
+    {
+      "abbreviation": "GS",
+      "displayName": "Games Started"
+    },
+    {
+      "abbreviation": "L",
+      "displayName": "Losses"
+    },
+    {
+      "abbreviation": "OTL",
+      "displayName": "Overtime Losses"
+    },
+    {
+      "abbreviation": "SA",
+      "displayName": "Shots Against"
+    },
+    {
+      "abbreviation": "SO",
+      "displayName": "Shutouts"
+    },
+    {
+      "abbreviation": "SV",
+      "displayName": "Saves"
+    },
+    {
+      "abbreviation": "SV%",
+      "displayName": "Save Percentage"
+    },
+    {
+      "abbreviation": "T",
+      "displayName": "Ties"
+    },
+    {
+      "abbreviation": "TOI/G",
+      "displayName": "Time On Ice Per Game"
+    },
+    {
+      "abbreviation": "WINS",
+      "displayName": "Wins"
+    }
+  ],
+  "teams": {
+    "new-york-rangers": {
+      "id": "13",
+      "abbreviation": "NYR"
+    }
+  }
+}

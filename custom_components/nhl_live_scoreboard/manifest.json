@@ -1,0 +1,18 @@
+{
+  "domain": "nhl_live_scoreboard",
+  "name": "NHL Live Scoreboard",
+  "codeowners": [
+    "@julianrinaldi"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "http",
+    "lovelace"
+  ],
+  "documentation": "https://github.com/julianrinaldi/nhl-live-scoreboard",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/julianrinaldi/nhl-live-scoreboard/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

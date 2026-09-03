@@ -1,0 +1,181 @@
+{
+  "categories": [
+    {
+      "name": "left-wing",
+      "displayName": "Regular Season ",
+      "labels": [
+        "GP",
+        "G",
+        "A",
+        "PTS",
+        "+/-",
+        "PIM",
+        "SOG",
+        "SPCT",
+        "PPG",
+        "PPA",
+        "SHG",
+        "SHA",
+        "GWG",
+        "TOI/G",
+        "PROD"
+      ],
+      "names": [
+        "games",
+        "goals",
+        "assists",
+        "points",
+        "plusMinus",
+        "penaltyMinutes",
+        "shootoutGoals",
+        "shootingPct",
+        "powerPlayGoals",
+        "powerPlayAssists",
+        "shortHandedGoals",
+        "shortHandedAssists",
+        "gameWinningGoals",
+        "timeOnIcePerGame",
+        "production"
+      ],
+      "statistics": [
+        {
+          "teamId": "9",
+          "teamSlug": "dallas-stars",
+          "season": {
+            "year": 2025,
+            "displayName": "24-25"
+          },
+          "stats": [
+            "82",
+            "35",
+            "45",
+            "80",
+            "10",
+            "18",
+            "3",
+            "16.6",
+            "9",
+            "10",
+            "0",
+            "0",
+            "6",
+            "17:47",
+            "18:14"
+          ],
+          "position": "LW"
+        },
+        {
+          "teamId": "9",
+          "teamSlug": "dallas-stars",
+          "season": {
+            "year": 2026,
+            "displayName": "25-26"
+          },
+          "stats": [
+            "82",
+            "45",
+            "51",
+            "96",
+            "22",
+            "32",
+            "4",
+            "15.3",
+            "15",
+            "26",
+            "0",
+            "0",
+            "9",
+            "20:15",
+            "17:17"
+          ],
+          "position": "LW"
+        }
+      ],
+      "totals": [
+        "456",
+        "213",
+        "277",
+        "490",
+        "117",
+        "130",
+        "18",
+        "15.2",
+        "60",
+        "97",
+        "0",
+        "0",
+        "40",
+        "18:26",
+        "141:33"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "abbreviation": "+/-",
+      "displayName": "Plus/Minus Rating"
+    },
+    {
+      "abbreviation": "A",
+      "displayName": "Assists"
+    },
+    {
+      "abbreviation": "G",
+      "displayName": "Goals"
+    },
+    {
+      "abbreviation": "GP",
+      "displayName": "Games Played"
+    },
+    {
+      "abbreviation": "GWG",
+      "displayName": "Game-Winning Goals"
+    },
+    {
+      "abbreviation": "PIM",
+      "displayName": "Penalty Minutes"
+    },
+    {
+      "abbreviation": "PPA",
+      "displayName": "Power Play Assists"
+    },
+    {
+      "abbreviation": "PPG",
+      "displayName": "Power Play Goals"
+    },
+    {
+      "abbreviation": "PROD",
+      "displayName": "Production"
+    },
+    {
+      "abbreviation": "PTS",
+      "displayName": "Points"
+    },
+    {
+      "abbreviation": "SHA",
+      "displayName": "Short Handed Assists"
+    },
+    {
+      "abbreviation": "SHG",
+      "displayName": "Short Handed Goals"
+    },
+    {
+      "abbreviation": "SOG",
+      "displayName": "Shootout Goals"
+    },
+    {
+      "abbreviation": "SPCT",
+      "displayName": "Shooting Percentage"
+    },
+    {
+      "abbreviation": "TOI/G",
+      "displayName": "Time On Ice Per Game"
+    }
+  ],
+  "teams": {
+    "dallas-stars": {
+      "id": "9",
+      "abbreviation": "DAL"
+    }
+  }
+}

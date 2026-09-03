@@ -1,0 +1,227 @@
+{
+  "children": [
+    {
+      "name": "Eastern Conference",
+      "standings": {
+        "entries": [
+          {
+            "team": {
+              "id": "12",
+              "abbreviation": "NYI",
+              "displayName": "New York Islanders"
+            },
+            "stats": [
+              {
+                "name": "otLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OTL",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "otlosses",
+                "value": 5,
+                "displayValue": "5"
+              },
+              {
+                "name": "losses",
+                "displayName": "Losses",
+                "shortDisplayName": "L",
+                "description": "Losses",
+                "abbreviation": "L",
+                "type": "losses",
+                "value": 34,
+                "displayValue": "34"
+              },
+              {
+                "name": "points",
+                "displayName": "Points",
+                "shortDisplayName": "PTS",
+                "description": "Total Points",
+                "abbreviation": "PTS",
+                "type": "points",
+                "value": 91,
+                "displayValue": "91"
+              },
+              {
+                "name": "wins",
+                "displayName": "Wins",
+                "shortDisplayName": "W",
+                "description": "Wins",
+                "abbreviation": "W",
+                "type": "wins",
+                "value": 43,
+                "displayValue": "43"
+              },
+              {
+                "name": "overtimeLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OT Losses",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "overtimelosses",
+                "value": 5,
+                "displayValue": "5"
+              },
+              {
+                "id": "0",
+                "name": "overall",
+                "abbreviation": "TOTAL",
+                "displayName": "Team Season Record",
+                "shortDisplayName": "Season",
+                "description": "Overall Record",
+                "type": "total",
+                "summary": "43-34-5",
+                "displayValue": "43-34-5, 91 PTS"
+              }
+            ]
+          },
+          {
+            "team": {
+              "id": "11",
+              "abbreviation": "NJ",
+              "displayName": "New Jersey Devils"
+            },
+            "stats": [
+              {
+                "name": "otLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OTL",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "otlosses",
+                "value": 3,
+                "displayValue": "3"
+              },
+              {
+                "name": "losses",
+                "displayName": "Losses",
+                "shortDisplayName": "L",
+                "description": "Losses",
+                "abbreviation": "L",
+                "type": "losses",
+                "value": 37,
+                "displayValue": "37"
+              },
+              {
+                "name": "points",
+                "displayName": "Points",
+                "shortDisplayName": "PTS",
+                "description": "Total Points",
+                "abbreviation": "PTS",
+                "type": "points",
+                "value": 87,
+                "displayValue": "87"
+              },
+              {
+                "name": "wins",
+                "displayName": "Wins",
+                "shortDisplayName": "W",
+                "description": "Wins",
+                "abbreviation": "W",
+                "type": "wins",
+                "value": 42,
+                "displayValue": "42"
+              },
+              {
+                "name": "overtimeLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OT Losses",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "overtimelosses",
+                "value": 3,
+                "displayValue": "3"
+              },
+              {
+                "id": "0",
+                "name": "overall",
+                "abbreviation": "TOTAL",
+                "displayName": "Team Season Record",
+                "shortDisplayName": "Season",
+                "description": "Overall Record",
+                "type": "total",
+                "summary": "42-37-3",
+                "displayValue": "42-37-3, 87 PTS"
+              }
+            ]
+          },
+          {
+            "team": {
+              "id": "13",
+              "abbreviation": "NYR",
+              "displayName": "New York Rangers"
+            },
+            "stats": [
+              {
+                "name": "otLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OTL",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "otlosses",
+                "value": 9,
+                "displayValue": "9"
+              },
+              {
+                "name": "losses",
+                "displayName": "Losses",
+                "shortDisplayName": "L",
+                "description": "Losses",
+                "abbreviation": "L",
+                "type": "losses",
+                "value": 39,
+                "displayValue": "39"
+              },
+              {
+                "name": "points",
+                "displayName": "Points",
+                "shortDisplayName": "PTS",
+                "description": "Total Points",
+                "abbreviation": "PTS",
+                "type": "points",
+                "value": 77,
+                "displayValue": "77"
+              },
+              {
+                "name": "wins",
+                "displayName": "Wins",
+                "shortDisplayName": "W",
+                "description": "Wins",
+                "abbreviation": "W",
+                "type": "wins",
+                "value": 34,
+                "displayValue": "34"
+              },
+              {
+                "name": "overtimeLosses",
+                "displayName": "Overtime Losses",
+                "shortDisplayName": "OT Losses",
+                "description": "Number of Overtime Losses",
+                "abbreviation": "OTL",
+                "type": "overtimelosses",
+                "value": 9,
+                "displayValue": "9"
+              },
+              {
+                "id": "0",
+                "name": "overall",
+                "abbreviation": "TOTAL",
+                "displayName": "Team Season Record",
+                "shortDisplayName": "Season",
+                "description": "Overall Record",
+                "type": "total",
+                "summary": "34-39-9",
+                "displayValue": "34-39-9, 77 PTS"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Western Conference",
+      "standings": {
+        "entries": []
+      }
+    }
+  ]
+}

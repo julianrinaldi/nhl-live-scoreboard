@@ -1,0 +1,2455 @@
+{
+  "header": {
+    "id": "401803625",
+    "season": {
+      "year": 2026,
+      "current": true,
+      "type": 2
+    },
+    "competitions": [
+      {
+        "id": "401803625",
+        "date": "2026-04-12T00:00Z",
+        "timeValid": null,
+        "competitors": [
+          {
+            "id": "17",
+            "homeAway": "home",
+            "score": "2",
+            "winner": false,
+            "linescores": [
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "0"
+              }
+            ],
+            "record": [
+              {
+                "type": "total",
+                "summary": "52-16-11",
+                "displayValue": "52-16-11, 115 PTS"
+              },
+              {
+                "type": "home",
+                "summary": "25-9-6",
+                "displayValue": "25-9-6"
+              }
+            ],
+            "team": {
+              "id": "17",
+              "abbreviation": "COL",
+              "name": "Avalanche",
+              "displayName": "Colorado Avalanche",
+              "logos": [
+                {
+                  "href": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
+                  "width": 500,
+                  "height": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "lastUpdated": "2024-07-02T15:51Z"
+                }
+              ]
+            }
+          },
+          {
+            "id": "37",
+            "homeAway": "away",
+            "score": "3",
+            "winner": true,
+            "linescores": [
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "1"
+              },
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "1"
+              }
+            ],
+            "record": [
+              {
+                "type": "total",
+                "summary": "37-26-17",
+                "displayValue": "37-26-17, 91 PTS"
+              },
+              {
+                "type": "road",
+                "summary": "19-14-8",
+                "displayValue": "19-14-8"
+              }
+            ],
+            "team": {
+              "id": "37",
+              "abbreviation": "VGK",
+              "name": "Golden Knights",
+              "displayName": "Vegas Golden Knights",
+              "logos": [
+                {
+                  "href": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+                  "width": 500,
+                  "height": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "lastUpdated": "2024-07-02T15:51Z"
+                }
+              ]
+            }
+          }
+        ],
+        "status": {
+          "type": {
+            "id": "3",
+            "name": "STATUS_FINAL",
+            "state": "post",
+            "completed": true,
+            "description": "Final",
+            "detail": "Final/OT",
+            "shortDetail": "Final/OT",
+            "altDetail": "OT"
+          },
+          "featuredAthletes": [
+            {
+              "name": "winningGoalie",
+              "displayName": "Winning Goalie",
+              "playerId": 4064582,
+              "athlete": {
+                "id": "4064582",
+                "uid": "s:70~l:90~a:4064582",
+                "guid": "9b8b8c91-a913-24c6-df8e-d3c01bea77b5",
+                "fullName": "Carter Hart",
+                "displayName": "Carter Hart",
+                "shortName": "C. Hart",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/4064582",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4064582.png",
+                  "alt": "Carter Hart"
+                }
+              },
+              "team": {
+                "id": "37",
+                "name": "Golden Knights",
+                "nickname": "Golden Knights"
+              }
+            },
+            {
+              "name": "losingGoalie",
+              "displayName": "Losing Goalie",
+              "playerId": 3904177,
+              "athlete": {
+                "id": "3904177",
+                "uid": "s:70~l:90~a:3904177",
+                "guid": "250fa49f-ed9a-33e3-febf-32e44e220753",
+                "fullName": "Mackenzie Blackwood",
+                "displayName": "Mackenzie Blackwood",
+                "shortName": "M. Blackwood",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/3904177",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3904177.png",
+                  "alt": "Mackenzie Blackwood"
+                }
+              },
+              "team": {
+                "id": "17",
+                "name": "Avalanche",
+                "nickname": "Avalanche"
+              }
+            },
+            {
+              "name": "firstStar",
+              "displayName": "First Star",
+              "playerId": 3648002,
+              "athlete": {
+                "id": "3648002",
+                "uid": "s:70~l:90~a:3648002",
+                "guid": "656e0c4e-5914-3a54-d2de-1242b6f15b5e",
+                "fullName": "Jack Eichel",
+                "displayName": "Jack Eichel",
+                "shortName": "J. Eichel",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/3648002",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3648002.png",
+                  "alt": "Jack Eichel"
+                }
+              },
+              "team": {
+                "id": "37",
+                "name": "Golden Knights",
+                "nickname": "Golden Knights"
+              }
+            },
+            {
+              "name": "secondStar",
+              "displayName": "Second Star",
+              "playerId": 4064582,
+              "athlete": {
+                "id": "4064582",
+                "uid": "s:70~l:90~a:4064582",
+                "guid": "9b8b8c91-a913-24c6-df8e-d3c01bea77b5",
+                "fullName": "Carter Hart",
+                "displayName": "Carter Hart",
+                "shortName": "C. Hart",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/4064582",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4064582.png",
+                  "alt": "Carter Hart"
+                }
+              },
+              "team": {
+                "id": "37",
+                "name": "Golden Knights",
+                "nickname": "Golden Knights"
+              }
+            },
+            {
+              "name": "thirdStar",
+              "displayName": "Third Star",
+              "playerId": 4587588,
+              "athlete": {
+                "id": "4587588",
+                "uid": "s:70~l:90~a:4587588",
+                "guid": "1d3dee86-7ad6-548d-2621-5008d9c0ea5b",
+                "fullName": "Pavel Dorofeyev",
+                "displayName": "Pavel Dorofeyev",
+                "shortName": "P. Dorofeyev",
+                "links": [
+                  {
+                    "language": "en-US",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nhl/player/_/id/4587588",
+                    "text": "Player Card",
+                    "shortText": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587588.png",
+                  "alt": "Pavel Dorofeyev"
+                }
+              },
+              "team": {
+                "id": "37",
+                "name": "Golden Knights",
+                "nickname": "Golden Knights"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "boxscore": {
+    "players": [
+      {
+        "team": {
+          "id": "37",
+          "abbreviation": "VGK"
+        },
+        "statistics": [
+          {
+            "name": "forwards",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "3114985",
+                  "displayName": "Ivan Barbashev",
+                  "shortName": "I. Barbashev",
+                  "position": {
+                    "abbreviation": "LW"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114985.png",
+                    "alt": "Ivan Barbashev"
+                  },
+                  "jersey": "49",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "2",
+                  "1",
+                  "0",
+                  "1",
+                  "16:32",
+                  "1:37",
+                  "0:00",
+                  "14:55",
+                  "23",
+                  "0",
+                  "22",
+                  "1",
+                  "0",
+                  "2",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "4587588",
+                  "displayName": "Pavel Dorofeyev",
+                  "shortName": "P. Dorofeyev",
+                  "position": {
+                    "abbreviation": "RW"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587588.png",
+                    "alt": "Pavel Dorofeyev"
+                  },
+                  "jersey": "16",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "0",
+                  "1",
+                  "1",
+                  "17:11",
+                  "4:05",
+                  "0:00",
+                  "13:06",
+                  "22",
+                  "1",
+                  "36",
+                  "0",
+                  "4",
+                  "2",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "defenses",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "3904186",
+                  "displayName": "Rasmus Andersson",
+                  "shortName": "R. Andersson",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3904186.png",
+                    "alt": "Rasmus Andersson"
+                  },
+                  "jersey": "4",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "1",
+                  "0",
+                  "1",
+                  "0",
+                  "25:51",
+                  "2:01",
+                  "2:33",
+                  "21:17",
+                  "36",
+                  "0",
+                  "16",
+                  "0",
+                  "3",
+                  "1",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "3",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "3652964",
+                  "displayName": "Noah Hanifin",
+                  "shortName": "N. Hanifin",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3652964.png",
+                    "alt": "Noah Hanifin"
+                  },
+                  "jersey": "15",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "1",
+                  "0",
+                  "1",
+                  "21:25",
+                  "0:32",
+                  "1:41",
+                  "19:12",
+                  "33",
+                  "0",
+                  "3",
+                  "0",
+                  "1",
+                  "2",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "skaters",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": []
+          },
+          {
+            "name": "goalies",
+            "keys": [
+              "goalsAgainst",
+              "shotsAgainst",
+              "shootoutSaves",
+              "shootoutShotsAgainst",
+              "saves",
+              "savePct",
+              "evenStrengthSaves",
+              "powerPlaySaves",
+              "shortHandedSaves",
+              "timeOnIce",
+              "ytdGoals",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "GA",
+              "SA",
+              "SOS",
+              "SOSA",
+              "SV",
+              "SV%",
+              "ESSV",
+              "PPSV",
+              "SHSV",
+              "TOI",
+              "YTDG",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4064582",
+                  "displayName": "Carter Hart",
+                  "shortName": "C. Hart",
+                  "position": {
+                    "abbreviation": "G"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4064582.png",
+                    "alt": "Carter Hart"
+                  },
+                  "jersey": "79",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "2",
+                  "32",
+                  "0",
+                  "0",
+                  "30",
+                  ".938",
+                  "24",
+                  "2",
+                  "4",
+                  "61:19",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "team": {
+          "id": "17",
+          "abbreviation": "COL"
+        },
+        "statistics": [
+          {
+            "name": "forwards",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4392471",
+                  "displayName": "Ross Colton",
+                  "shortName": "R. Colton",
+                  "position": {
+                    "abbreviation": "C"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4392471.png",
+                    "alt": "Ross Colton"
+                  },
+                  "jersey": "20",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "2",
+                  "0",
+                  "1",
+                  "10:13",
+                  "0:00",
+                  "0:00",
+                  "10:13",
+                  "16",
+                  "0",
+                  "9",
+                  "0",
+                  "1",
+                  "1",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "4378671",
+                  "displayName": "Jack Drury",
+                  "shortName": "J. Drury",
+                  "position": {
+                    "abbreviation": "C"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4378671.png",
+                    "alt": "Jack Drury"
+                  },
+                  "jersey": "18",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "0",
+                  "1",
+                  "0",
+                  "-1",
+                  "12:19",
+                  "0:00",
+                  "2:30",
+                  "9:49",
+                  "15",
+                  "0",
+                  "10",
+                  "0",
+                  "3",
+                  "0",
+                  "0",
+                  "2",
+                  "3",
+                  "40.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "defenses",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "4781550",
+                  "displayName": "Nick Blankenburg",
+                  "shortName": "N. Blankenburg",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4781550.png",
+                    "alt": "Nick Blankenburg"
+                  },
+                  "jersey": "37",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "3",
+                  "0",
+                  "0",
+                  "1",
+                  "14:06",
+                  "0:00",
+                  "0:53",
+                  "13:13",
+                  "20",
+                  "1",
+                  "7",
+                  "0",
+                  "2",
+                  "3",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "0",
+                  "0",
+                  "0"
+                ]
+              },
+              {
+                "athlete": {
+                  "id": "2300",
+                  "displayName": "Brent Burns",
+                  "shortName": "B. Burns",
+                  "position": {
+                    "abbreviation": "D"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/2300.png",
+                    "alt": "Brent Burns"
+                  },
+                  "jersey": "84",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "2",
+                  "0",
+                  "1",
+                  "0",
+                  "18:52",
+                  "0:21",
+                  "1:22",
+                  "17:09",
+                  "25",
+                  "0",
+                  "12",
+                  "0",
+                  "2",
+                  "1",
+                  "0",
+                  "0",
+                  "0",
+                  "0.0",
+                  "2",
+                  "1",
+                  "2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "skaters",
+            "keys": [
+              "blockedShots",
+              "hits",
+              "takeaways",
+              "plusMinus",
+              "timeOnIce",
+              "powerPlayTimeOnIce",
+              "shortHandedTimeOnIce",
+              "evenStrengthTimeOnIce",
+              "shifts",
+              "goals",
+              "ytdGoals",
+              "assists",
+              "shotsTotal",
+              "shotsMissed",
+              "shootoutGoals",
+              "faceoffsWon",
+              "faceoffsLost",
+              "faceoffPercent",
+              "giveaways",
+              "penalties",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "BS",
+              "HT",
+              "TK",
+              "+/-",
+              "TOI",
+              "PPTOI",
+              "SHTOI",
+              "ESTOI",
+              "SHFT",
+              "G",
+              "YTDG",
+              "A",
+              "S",
+              "SM",
+              "SOG",
+              "FW",
+              "FL",
+              "FO%",
+              "GV",
+              "PN",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": []
+          },
+          {
+            "name": "goalies",
+            "keys": [
+              "goalsAgainst",
+              "shotsAgainst",
+              "shootoutSaves",
+              "shootoutShotsAgainst",
+              "saves",
+              "savePct",
+              "evenStrengthSaves",
+              "powerPlaySaves",
+              "shortHandedSaves",
+              "timeOnIce",
+              "ytdGoals",
+              "penaltyMinutes"
+            ],
+            "labels": [
+              "GA",
+              "SA",
+              "SOS",
+              "SOSA",
+              "SV",
+              "SV%",
+              "ESSV",
+              "PPSV",
+              "SHSV",
+              "TOI",
+              "YTDG",
+              "PIM"
+            ],
+            "totals": null,
+            "athletes": [
+              {
+                "athlete": {
+                  "id": "3904177",
+                  "displayName": "Mackenzie Blackwood",
+                  "shortName": "M. Blackwood",
+                  "position": {
+                    "abbreviation": "G"
+                  },
+                  "headshot": {
+                    "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3904177.png",
+                    "alt": "Mackenzie Blackwood"
+                  },
+                  "jersey": "39",
+                  "active": true,
+                  "scratched": false
+                },
+                "stats": [
+                  "3",
+                  "29",
+                  "0",
+                  "0",
+                  "26",
+                  ".897",
+                  "23",
+                  "3",
+                  "0",
+                  "61:19",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "homeAway": "away",
+        "team": {
+          "id": "37",
+          "abbreviation": "VGK"
+        },
+        "statistics": [
+          {
+            "name": "blockedShots",
+            "abbreviation": "BS",
+            "displayValue": "12",
+            "label": "Blocked Shots"
+          },
+          {
+            "name": "hits",
+            "abbreviation": "HT",
+            "displayValue": "18",
+            "label": "Hits"
+          },
+          {
+            "name": "takeaways",
+            "abbreviation": "TK",
+            "displayValue": "7",
+            "label": "Takeaways"
+          },
+          {
+            "name": "shotsTotal",
+            "abbreviation": "S",
+            "displayValue": "29",
+            "label": "Shots"
+          },
+          {
+            "name": "powerPlayGoals",
+            "abbreviation": "PPG",
+            "displayValue": "1",
+            "label": "Power Play Goals"
+          },
+          {
+            "name": "powerPlayOpportunities",
+            "abbreviation": "PPO",
+            "displayValue": "4",
+            "label": "Power Play Opportunities"
+          },
+          {
+            "name": "powerPlayPct",
+            "abbreviation": "PCT",
+            "displayValue": "25.0",
+            "label": "Power Play Percentage"
+          },
+          {
+            "name": "shortHandedGoals",
+            "abbreviation": "SHG",
+            "displayValue": "0",
+            "label": "Short Handed Goals"
+          },
+          {
+            "name": "shootoutGoals",
+            "abbreviation": "SOG",
+            "displayValue": "0",
+            "label": "Shootout Goals"
+          },
+          {
+            "name": "faceoffsWon",
+            "abbreviation": "FW",
+            "displayValue": "28",
+            "label": "Faceoffs Won"
+          },
+          {
+            "name": "faceoffPercent",
+            "abbreviation": "FO%",
+            "displayValue": "53.8",
+            "label": "Faceoff Win Percent"
+          },
+          {
+            "name": "giveaways",
+            "abbreviation": "GV",
+            "displayValue": "12",
+            "label": "Giveaways"
+          },
+          {
+            "name": "penalties",
+            "abbreviation": "PN",
+            "displayValue": "3",
+            "label": "Total Penalties"
+          },
+          {
+            "name": "penaltyMinutes",
+            "abbreviation": "PIM",
+            "displayValue": "6",
+            "label": "Penalty Minutes"
+          }
+        ]
+      },
+      {
+        "homeAway": "home",
+        "team": {
+          "id": "17",
+          "abbreviation": "COL"
+        },
+        "statistics": [
+          {
+            "name": "blockedShots",
+            "abbreviation": "BS",
+            "displayValue": "20",
+            "label": "Blocked Shots"
+          },
+          {
+            "name": "hits",
+            "abbreviation": "HT",
+            "displayValue": "13",
+            "label": "Hits"
+          },
+          {
+            "name": "takeaways",
+            "abbreviation": "TK",
+            "displayValue": "5",
+            "label": "Takeaways"
+          },
+          {
+            "name": "shotsTotal",
+            "abbreviation": "S",
+            "displayValue": "32",
+            "label": "Shots"
+          },
+          {
+            "name": "powerPlayGoals",
+            "abbreviation": "PPG",
+            "displayValue": "1",
+            "label": "Power Play Goals"
+          },
+          {
+            "name": "powerPlayOpportunities",
+            "abbreviation": "PPO",
+            "displayValue": "3",
+            "label": "Power Play Opportunities"
+          },
+          {
+            "name": "powerPlayPct",
+            "abbreviation": "PCT",
+            "displayValue": "33.3",
+            "label": "Power Play Percentage"
+          },
+          {
+            "name": "shortHandedGoals",
+            "abbreviation": "SHG",
+            "displayValue": "0",
+            "label": "Short Handed Goals"
+          },
+          {
+            "name": "shootoutGoals",
+            "abbreviation": "SOG",
+            "displayValue": "0",
+            "label": "Shootout Goals"
+          },
+          {
+            "name": "faceoffsWon",
+            "abbreviation": "FW",
+            "displayValue": "24",
+            "label": "Faceoffs Won"
+          },
+          {
+            "name": "faceoffPercent",
+            "abbreviation": "FO%",
+            "displayValue": "46.2",
+            "label": "Faceoff Win Percent"
+          },
+          {
+            "name": "giveaways",
+            "abbreviation": "GV",
+            "displayValue": "17",
+            "label": "Giveaways"
+          },
+          {
+            "name": "penalties",
+            "abbreviation": "PN",
+            "displayValue": "4",
+            "label": "Total Penalties"
+          },
+          {
+            "name": "penaltyMinutes",
+            "abbreviation": "PIM",
+            "displayValue": "8",
+            "label": "Penalty Minutes"
+          }
+        ]
+      }
+    ]
+  },
+  "plays": [
+    {
+      "id": "401803625000000520",
+      "sequenceNumber": "2",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 1st Period",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T00:16Z",
+      "wallclock": "2026-04-12T00:16:02Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000002020",
+      "sequenceNumber": "9",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Jeremy Lauzon Wrist Shot saved by Mackenzie Blackwood",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "1:42"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T00:46Z",
+      "team": {
+        "id": "37"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3904185",
+            "displayName": "Jeremy Lauzon",
+            "shortName": "J. Lauzon",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3904185.png",
+              "alt": "Jeremy Lauzon"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 1
+        },
+        {
+          "athlete": {
+            "id": "3904177",
+            "displayName": "Mackenzie Blackwood",
+            "shortName": "M. Blackwood",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3904177.png",
+              "alt": "Mackenzie Blackwood"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T00:18:10Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -1,
+        "y": 39
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000000790",
+      "sequenceNumber": "14",
+      "type": {
+        "id": "506",
+        "text": "Shot",
+        "abbreviation": "shot-on-goal"
+      },
+      "text": "Parker Kelly Tip-In saved by Carter Hart",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "2:44"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T00:32Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4392309",
+            "displayName": "Parker Kelly",
+            "shortName": "P. Kelly",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4392309.png",
+              "alt": "Parker Kelly"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 20
+        },
+        {
+          "athlete": {
+            "id": "4064582",
+            "displayName": "Carter Hart",
+            "shortName": "C. Hart",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4064582.png",
+              "alt": "Carter Hart"
+            }
+          },
+          "type": "saver",
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T00:19:12Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": -80,
+        "y": 1
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000001700",
+      "sequenceNumber": "41",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Devon Toews Goal (3) Wrist Shot, assists: Brock Nelson (32), Martin Necas (61)",
+      "awayScore": 0,
+      "homeScore": 1,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "9:17"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-12T02:49Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3096249",
+            "displayName": "Devon Toews",
+            "shortName": "D. Toews",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3096249.png",
+              "alt": "Devon Toews"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 3
+        },
+        {
+          "athlete": {
+            "id": "5798",
+            "displayName": "Brock Nelson",
+            "shortName": "B. Nelson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5798.png",
+              "alt": "Brock Nelson"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 32
+        },
+        {
+          "athlete": {
+            "id": "4233586",
+            "displayName": "Martin Necas",
+            "shortName": "M. Necas",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233586.png",
+              "alt": "Martin Necas"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 61
+        }
+      ],
+      "wallclock": "2026-04-12T00:30:01Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": -33,
+        "y": 18
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803625000002940",
+      "sequenceNumber": "74",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Mark Stone Goal (27) Backhand, assists: Tomas Hertl (33), Mitch Marner (56)",
+      "awayScore": 1,
+      "homeScore": 1,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "13:47"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-12T02:49Z",
+      "team": {
+        "id": "37"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5545",
+            "displayName": "Mark Stone",
+            "shortName": "M. Stone",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5545.png",
+              "alt": "Mark Stone"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 27
+        },
+        {
+          "athlete": {
+            "id": "2976844",
+            "displayName": "Tomas Hertl",
+            "shortName": "T. Hertl",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/2976844.png",
+              "alt": "Tomas Hertl"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 33
+        },
+        {
+          "athlete": {
+            "id": "3899937",
+            "displayName": "Mitch Marner",
+            "shortName": "M. Marner",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899937.png",
+              "alt": "Mitch Marner"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 56
+        }
+      ],
+      "wallclock": "2026-04-12T00:42:24Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 78,
+        "y": -5
+      },
+      "strength": {
+        "id": "702",
+        "text": "Power Play",
+        "abbreviation": "power-play"
+      }
+    },
+    {
+      "id": "401803625000000220",
+      "sequenceNumber": "103",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 1st Period",
+      "awayScore": 1,
+      "homeScore": 1,
+      "period": {
+        "number": 1,
+        "displayValue": "1st"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T01:01Z",
+      "wallclock": "2026-04-12T00:54:39Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803625000003860",
+      "sequenceNumber": "106",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 2nd Period",
+      "awayScore": 1,
+      "homeScore": 1,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T01:16Z",
+      "wallclock": "2026-04-12T01:13:38Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "703",
+        "text": "Shorthanded",
+        "abbreviation": "short-handed"
+      }
+    },
+    {
+      "id": "401803625000004580",
+      "sequenceNumber": "114",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Pavel Dorofeyev Goal (36) Snap Shot, assists: Ivan Barbashev (37), Kaedan Korczak (12)",
+      "awayScore": 2,
+      "homeScore": 1,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "2:09"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-12T02:49Z",
+      "team": {
+        "id": "37"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4587588",
+            "displayName": "Pavel Dorofeyev",
+            "shortName": "P. Dorofeyev",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587588.png",
+              "alt": "Pavel Dorofeyev"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 36
+        },
+        {
+          "athlete": {
+            "id": "3114985",
+            "displayName": "Ivan Barbashev",
+            "shortName": "I. Barbashev",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114985.png",
+              "alt": "Ivan Barbashev"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 37
+        },
+        {
+          "athlete": {
+            "id": "4565264",
+            "displayName": "Kaedan Korczak",
+            "shortName": "K. Korczak",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4565264.png",
+              "alt": "Kaedan Korczak"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 12
+        }
+      ],
+      "wallclock": "2026-04-12T01:15:47Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": -72,
+        "y": -24
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000005860",
+      "sequenceNumber": "153",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Nick Blankenburg Goal (7) Wrist Shot, assists: Nicolas Roy (16)",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "10:56"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-12T02:49Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "4781550",
+            "displayName": "Nick Blankenburg",
+            "shortName": "N. Blankenburg",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4781550.png",
+              "alt": "Nick Blankenburg"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 7
+        },
+        {
+          "athlete": {
+            "id": "3943996",
+            "displayName": "Nicolas Roy",
+            "shortName": "N. Roy",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3943996.png",
+              "alt": "Nicolas Roy"
+            }
+          },
+          "type": "assister",
+          "ytdAssists": 16
+        }
+      ],
+      "wallclock": "2026-04-12T01:32:51Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": 27,
+        "y": 27
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000000400",
+      "sequenceNumber": "198",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 2nd Period",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 2,
+        "displayValue": "2nd"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T01:51Z",
+      "wallclock": "2026-04-12T01:49:43Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000008090",
+      "sequenceNumber": "201",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of 3rd Period",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:12Z",
+      "wallclock": "2026-04-12T02:08:33Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000004100",
+      "sequenceNumber": "317",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of 3rd Period",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 3,
+        "displayValue": "3rd"
+      },
+      "clock": {
+        "displayValue": "20:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "wallclock": "2026-04-12T02:44:04Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000011190",
+      "sequenceNumber": "320",
+      "type": {
+        "id": "518",
+        "text": "Period Start",
+        "abbreviation": "period-start"
+      },
+      "text": "Start of Overtime",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "wallclock": "2026-04-12T02:47:07Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000011180",
+      "sequenceNumber": "321",
+      "type": {
+        "id": "502",
+        "text": "Face Off",
+        "abbreviation": "faceoff"
+      },
+      "text": "Brock Nelson faceoff won against Nic Dowd",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:00"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T03:12Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5798",
+            "displayName": "Brock Nelson",
+            "shortName": "B. Nelson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5798.png",
+              "alt": "Brock Nelson"
+            }
+          },
+          "type": "face-off-winner",
+          "ytdGoals": 33
+        },
+        {
+          "athlete": {
+            "id": "3025616",
+            "displayName": "Nic Dowd",
+            "shortName": "N. Dowd",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3025616.png",
+              "alt": "Nic Dowd"
+            }
+          },
+          "ytdAssists": 15
+        }
+      ],
+      "wallclock": "2026-04-12T02:47:07Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000011330",
+      "sequenceNumber": "322",
+      "type": {
+        "id": "1401",
+        "text": "Takeaway",
+        "abbreviation": "takeaway"
+      },
+      "text": "Takeaway by Brock Nelson",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "0:51"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "5798",
+            "displayName": "Brock Nelson",
+            "shortName": "B. Nelson",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5798.png",
+              "alt": "Brock Nelson"
+            }
+          },
+          "type": "taker",
+          "ytdGoals": 33
+        }
+      ],
+      "wallclock": "2026-04-12T02:47:58Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 12,
+        "y": -12
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000011260",
+      "sequenceNumber": "323",
+      "type": {
+        "id": "507",
+        "text": "Missed",
+        "abbreviation": "shot-missed"
+      },
+      "text": "Devon Toews Wrist Shot Wide Left",
+      "awayScore": 2,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "1:10"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "team": {
+        "id": "17"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3096249",
+            "displayName": "Devon Toews",
+            "shortName": "D. Toews",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3096249.png",
+              "alt": "Devon Toews"
+            }
+          },
+          "type": "shooter",
+          "ytdGoals": 3
+        },
+        {
+          "athlete": {
+            "id": "4064582",
+            "displayName": "Carter Hart",
+            "shortName": "C. Hart",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4064582.png",
+              "alt": "Carter Hart"
+            }
+          },
+          "ytdAssists": 0
+        }
+      ],
+      "wallclock": "2026-04-12T02:48:17Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 72,
+        "y": -9
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000011270",
+      "sequenceNumber": "324",
+      "type": {
+        "id": "505",
+        "text": "Goal",
+        "abbreviation": "goal"
+      },
+      "text": "Jack Eichel Goal (26) Wrist Shot, assists: none",
+      "awayScore": 3,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "1:19"
+      },
+      "scoringPlay": true,
+      "scoreValue": 1,
+      "modified": "2026-04-12T02:53Z",
+      "team": {
+        "id": "37"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "id": "3648002",
+            "displayName": "Jack Eichel",
+            "shortName": "J. Eichel",
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3648002.png",
+              "alt": "Jack Eichel"
+            }
+          },
+          "type": "scorer",
+          "ytdGoals": 26
+        }
+      ],
+      "wallclock": "2026-04-12T02:48:25Z",
+      "shootingPlay": true,
+      "shotInfo": {
+        "id": "901",
+        "text": "None",
+        "abbreviation": "regular"
+      },
+      "coordinate": {
+        "x": -70,
+        "y": 16
+      },
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000004150",
+      "sequenceNumber": "325",
+      "type": {
+        "id": "519",
+        "text": "Period End",
+        "abbreviation": "period-end"
+      },
+      "text": "End of OT",
+      "awayScore": 3,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "1:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "wallclock": "2026-04-12T02:48:25Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    },
+    {
+      "id": "401803625000004190",
+      "sequenceNumber": "327",
+      "type": {
+        "id": "522",
+        "text": "End of Game"
+      },
+      "text": "Game End",
+      "awayScore": 3,
+      "homeScore": 2,
+      "period": {
+        "number": 4,
+        "displayValue": "OT"
+      },
+      "clock": {
+        "displayValue": "1:19"
+      },
+      "scoringPlay": false,
+      "scoreValue": 0,
+      "modified": "2026-04-12T02:53Z",
+      "wallclock": "2026-04-12T02:48:25Z",
+      "shootingPlay": true,
+      "strength": {
+        "id": "701",
+        "text": "Even Strength",
+        "abbreviation": "even-strength"
+      }
+    }
+  ],
+  "onIce": [
+    {
+      "entries": [
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/17/roster/3041969/projections?lang=en&region=us"
+          },
+          "athleteid": "3041969"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/17/roster/3096249/projections?lang=en&region=us"
+          },
+          "athleteid": "3096249"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/17/roster/3904177/projections?lang=en&region=us"
+          },
+          "athleteid": "3904177"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/17/roster/4233586/projections?lang=en&region=us"
+          },
+          "athleteid": "4233586"
+        }
+      ],
+      "teamId": "17"
+    },
+    {
+      "entries": [
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/37/roster/5545/projections?lang=en&region=us"
+          },
+          "athleteid": "5545"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/37/roster/3652964/projections?lang=en&region=us"
+          },
+          "athleteid": "3652964"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/37/roster/3904186/projections?lang=en&region=us"
+          },
+          "athleteid": "3904186"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/37/roster/4064582/projections?lang=en&region=us"
+          },
+          "athleteid": "4064582"
+        },
+        {
+          "whereabouts": {
+            "id": "1",
+            "description": "In Play",
+            "name": "ROSTER_WHEREABOUTS_IN_PLAY"
+          },
+          "projections": {
+            "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401803625/competitions/401803625/competitors/37/roster/4565264/projections?lang=en&region=us"
+          },
+          "athleteid": "4565264"
+        }
+      ],
+      "teamId": "37"
+    }
+  ],
+  "leaders": [
+    {
+      "team": {
+        "id": "17",
+        "abbreviation": "COL"
+      },
+      "leaders": [
+        {
+          "name": "goals",
+          "displayName": "Goals",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "4781550",
+                "displayName": "Nick Blankenburg",
+                "shortName": "N. Blankenburg",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4781550.png",
+                  "alt": "Nick Blankenburg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "assists",
+          "displayName": "Assists",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "3943996",
+                "displayName": "Nicolas Roy",
+                "shortName": "N. Roy",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3943996.png",
+                  "alt": "Nicolas Roy"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "points",
+          "displayName": "Points",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "3096249",
+                "displayName": "Devon Toews",
+                "shortName": "D. Toews",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3096249.png",
+                  "alt": "Devon Toews"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": "37",
+        "abbreviation": "VGK"
+      },
+      "leaders": [
+        {
+          "name": "goals",
+          "displayName": "Goals",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "5545",
+                "displayName": "Mark Stone",
+                "shortName": "M. Stone",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5545.png",
+                  "alt": "Mark Stone"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "assists",
+          "displayName": "Assists",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "3114985",
+                "displayName": "Ivan Barbashev",
+                "shortName": "I. Barbashev",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114985.png",
+                  "alt": "Ivan Barbashev"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "points",
+          "displayName": "Points",
+          "leaders": [
+            {
+              "displayValue": "1",
+              "value": 1,
+              "athlete": {
+                "id": "5545",
+                "displayName": "Mark Stone",
+                "shortName": "M. Stone",
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nhl/players/full/5545.png",
+                  "alt": "Mark Stone"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "athlete": {
+    "id": "4233875",
+    "displayName": "Jason Robertson",
+    "fullName": "Jason Robertson",
+    "displayHeight": "6' 3\"",
+    "displayWeight": "207 lbs",
+    "displayDraft": "2017: Rd 2, Pk 39 (DAL)",
+    "displayExperience": "6th Season",
+    "displayBirthPlace": "Northville, MI",
+    "displayDOB": "7/22/1999",
+    "displayDebut": null,
+    "position": {
+      "id": "2",
+      "name": "Left Wing",
+      "displayName": "Left Wing",
+      "abbreviation": "LW",
+      "leaf": true,
+      "parent": {
+        "leaf": false
+      },
+      "slug": "left-wing"
+    },
+    "age": 27,
+    "jersey": "21",
+    "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233875.png",
+      "alt": "Jason Robertson"
+    },
+    "shoots": null,
+    "catches": null,
+    "team": {
+      "id": "9",
+      "abbreviation": "DAL",
+      "displayName": "Dallas Stars"
+    }
+  }
+}
