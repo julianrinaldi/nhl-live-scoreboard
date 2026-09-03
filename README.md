@@ -1,6 +1,6 @@
 # NHL Live Scoreboard / GameTracker
 
-This is an NHL-focused modified version of [MLB Live Scoreboard](https://github.com/johnbr/mlb-live-scoreboard), originally created by [@johnbr](https://github.com/johnbr). It follows the same adaptation and distribution approach as [NFL Live Scoreboard](https://github.com/julianrinaldi/nfl-live-scoreboard).
+This is an NHL-focused modified version of [MLB Live Scoreboard](https://github.com/johnbr/mlb-live-scoreboard), originally created by [@johnbr](https://github.com/johnbr). It follows the same adaptation and distribution approach as [NFL Live Scoreboard](https://github.com/julianrinaldi/nfl-live-scoreboard) and [NBA Live Scoreboard](https://github.com/julianrinaldi/nba-live-scoreboard).
 
 A Home Assistant custom integration and bundled Lovelace card for live NHL game data from ESPN.
 
