@@ -48,6 +48,7 @@ def _install_homeassistant_stubs() -> None:
     ha_helpers_device = _make("homeassistant.helpers.device_registry")
     ha_helpers_platform = _make("homeassistant.helpers.entity_platform")
     ha_helpers_script = _make("homeassistant.helpers.script")
+    ha_helpers_storage = _make("homeassistant.helpers.storage")
     ha_helpers_selector = _make("homeassistant.helpers.selector")
     ha_helpers_update = _make("homeassistant.helpers.update_coordinator")
     ha_components_sensor = _make("homeassistant.components.sensor")
@@ -66,6 +67,7 @@ def _install_homeassistant_stubs() -> None:
     ha_helpers.device_registry = ha_helpers_device
     ha_helpers.entity_platform = ha_helpers_platform
     ha_helpers.script = ha_helpers_script
+    ha_helpers.storage = ha_helpers_storage
     ha_helpers.selector = ha_helpers_selector
     ha_helpers.update_coordinator = ha_helpers_update
 
@@ -96,6 +98,14 @@ def _install_homeassistant_stubs() -> None:
     ha_helpers_device.DeviceEntryType = _types.SimpleNamespace(SERVICE="service")
     ha_helpers_platform.AddEntitiesCallback = _Stub
     ha_helpers_script.Script = _Stub
+    class _Store(_Stub):
+        async def async_load(self):
+            return None
+
+        async def async_save(self, data):
+            pass
+
+    ha_helpers_storage.Store = _Store
     ha_helpers_selector.ActionSelector = _Stub
     ha_helpers_update.DataUpdateCoordinator = _Stub
     # Distinct subclass so ``CoordinatorEntity[...], SensorEntity`` don't

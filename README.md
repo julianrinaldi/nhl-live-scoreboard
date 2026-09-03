@@ -78,7 +78,7 @@ If the card is missing from the picker, refresh the dashboard after setting up t
 ```yaml
 lovelace:
   resources:
-    - url: /hacsfiles/nhl_live_scoreboard/nhl-live-game-card.js?v=110
+    - url: /hacsfiles/nhl_live_scoreboard/nhl-live-game-card.js?v=120
       type: module
 ```
 
@@ -91,7 +91,8 @@ Do not replace other resources or dashboards.
 | `entity` | required | NHL scoreboard sensor |
 | `title` | `""` | Upstream-compatible; no separate title heading is rendered |
 | `refresh_rate` | `0` | Local repaint seconds; does not control feed polling |
-| `show_within_hours` | `0` | Optional per-card visibility window; `0` always shows, positive hours show only near the next game or while live |
+| `show_within_hours` | `0` | Optional per-card visibility window; `0` always shows, positive hours enable pregame/live/postgame visibility rules |
+| `show_after_hours` | `0` | With a positive `show_within_hours`, extend visibility this many hours after a known finish; `0` adds no extension |
 | `show_matchup` | `true` | Goalie matchup or Game Leaders |
 | `show_records` | `true` | Win-loss-overtime-loss records on compact pregame/final cards |
 | `show_linescore` | `false` | Period goals and shots on goal in the expanded live view |
@@ -118,7 +119,11 @@ Expansion resets to the configured default for a new game. Schedule navigation r
 
 Set `show_within_hours: 24` to hide this card when the team's next game is more than 24 hours away, or no usable next start is available. It appears automatically as the window opens, without a page refresh, even with `refresh_rate: 0`. The default `0` leaves existing dashboards unchanged. Decimal hours are accepted; the visual editor uses half-hour steps.
 
-Live games, intermissions, and in-progress delays stay visible. A completed game hides unless the next game is within the window; this option changes visibility only, so the normal recent-result display may remain when the card is visible. Browsing another game or period does not change eligibility. Cancelled, postponed, completed, and unknown-time schedule entries are excluded. A scheduled start may remain eligible for up to six hours after its timestamp while awaiting a live/final feed update; a pregame delay is not automatically treated as live.
+Live games, intermissions, and in-progress delays stay visible. A completed game hides unless the next game is within the window or the optional postgame extension is active. These options change visibility only; automatic game selection and its recent-result display are unchanged. Browsing another game or period does not change eligibility. Cancelled, postponed, completed, and unknown-time schedule entries are excluded from upcoming games. A scheduled start may remain eligible for up to six hours after its timestamp while awaiting a live/final feed update; a pregame delay is not automatically treated as live.
+
+Set `show_after_hours: 2` to keep the card visible for two hours after the team's latest known finish. The pregame and postgame windows are combined: either can keep it visible. The postgame window expires automatically at the finish time plus the configured hours, without a page refresh. `0` or blank adds no extension. If `show_within_hours` is `0`, the card is always visible and `show_after_hours` has no effect.
+
+Finish times use an ESPN-reported end-of-game marker (`espn_end_play`), whose timestamp may differ from the actual final whistle. When that is unavailable, a closely observed live-to-final update can supply an approximate finish (`observed_transition`), with polling delay; it requires observing the same game live and then final within 120 seconds. Neither source guarantees the exact whistle time. Unknown finish times do not create an invented window. Kickoff, the first time a browser sees a final, and later feed modifications are never treated as the finish. Known finish records are retained across Home Assistant restarts. The card timer itself does not poll ESPN; the backend may fetch and cache the latest final summary to recover its finish time, retrying missing results no more than once every five minutes.
 
 Hidden cards remain connected and check the boundary at least once per minute while the dashboard is active. Browser background throttling may delay wake-up. The card stays visible in the editor/preview, and missing-entity or unavailable-data messages remain visible for troubleshooting. This is a per-card setting; it does not alter polling, sensors, or automations.
 
@@ -126,6 +131,7 @@ Hidden cards remain connected and check the boundary at least once per minute wh
 type: custom:nhl-live-game-card
 entity: sensor.nhl_live_scoreboard_nyr
 show_within_hours: 24
+show_after_hours: 2
 ```
 
 Period plays are newest-first inside a keyboard-scrollable panel capped at 320px, keeping the dashboard compact while retaining the complete available period history.
@@ -192,6 +198,8 @@ Options actions use top-level variables such as `team_score`; event automations 
 
 `next_game_start` is the next usable selected-team schedule start as a UTC ISO timestamp, or `null`. It is independent of the displayed game's date and is derived from the existing schedule cache, without additional polling.
 
+`last_game_end` is the latest known selected-team finish as a UTC ISO timestamp, or `null`. Its event ID and source are exposed as `last_game_end_event_id` and `last_game_end_source`. These describe the team's latest finish independently of a browsed game.
+
 The state is the ESPN event ID, or `idle`. Attributes include `game_active`, `mode`, `is_live`, `status_text`, `competition`, `period_context`, `goalies`, `situation`, `current_period`, `recent_plays`, `scoring_plays`, `team_stats`, `leaders`, and `division_standings`.
 
 Live attributes are excluded from recorder history to avoid large, rapidly changing records. The card reads current state directly.
@@ -240,6 +248,8 @@ Game statistics belong to the selected event. Season/career tables show availabl
 ## Development and Validation
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) and [docs/VALIDATION.md](docs/VALIDATION.md). Workflows retain Tests, Hassfest, HACS validation, and release-please.
+
+See [postgame-window validation](docs/POSTGAME_VALIDATION.md) for v1.2.0 timing, persistence, and isolated Home Assistant browser checks.
 
 ```sh
 python -m pip install pytest pytest-asyncio ruff

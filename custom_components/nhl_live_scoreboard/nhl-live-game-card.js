@@ -1,5 +1,5 @@
 const CARD_TAG = "nhl-live-game-card";
-const CARD_VERSION = "1.1.0"; // x-release-please-version
+const CARD_VERSION = "1.2.0"; // x-release-please-version
 const EDITOR_TAG = "nhl-live-game-card-editor";
 const INTEGRATION_DOMAIN = "nhl_live_scoreboard";
 const DOCS_URL = "https://github.com/julianrinaldi/nhl-live-scoreboard";
@@ -19,7 +19,7 @@ const CARD_DEFAULTS = {
   show_plays: true, show_play_results: true, show_period_summary: true,
   show_strength: true, show_rink: true, show_situation: true,
   show_win_probability: true, show_shot_chart: false, show_highlights: false,
-  refresh_rate: 0, show_within_hours: 0, player_link_target: "popup", show_team_stats_popup: true,
+  refresh_rate: 0, show_within_hours: 0, show_after_hours: 0, player_link_target: "popup", show_team_stats_popup: true,
   team_stats_default_view: "auto", show_schedule_nav: true, show_period_nav: true,
   live_default_view: "collapsed", headshot_size: "auto",
 };
@@ -46,6 +46,9 @@ const EDITOR_SCHEMA = [
       min: 0, max: 300, step: 1, mode: "box", unit_of_measurement: "s",
     } } },
     { name: "show_within_hours", selector: { number: {
+      min: 0, step: 0.5, mode: "box", unit_of_measurement: "h",
+    } } },
+    { name: "show_after_hours", selector: { number: {
       min: 0, step: 0.5, mode: "box", unit_of_measurement: "h",
     } } },
     selectSchema("player_link_target", [
@@ -80,6 +83,7 @@ const EDITOR_LABELS = {
   entity: "NHL Live Scoreboard entity", title: "Card title (optional)",
   refresh_rate: "Refresh rate (s, 0 = HA updates)", player_link_target: "Player name click",
   show_within_hours: "Show only within (hours, 0 = always)",
+  show_after_hours: "Show after game ends (hours)",
   team_stats_default_view: "Team stats popup default view",
   live_default_view: "Live game default view", headshot_size: "Headshot size",
   show_team_stats_popup: "Enable team statistics popup",
@@ -94,7 +98,8 @@ const EDITOR_LABELS = {
 const EDITOR_HELPERS = {
   entity: "Pick the sensor created by the NHL Live Scoreboard integration.",
   refresh_rate: "0 leaves refreshing to Home Assistant state updates. This only repaints the card; it does not change ESPN polling.",
-  show_within_hours: "0 always shows the card. Otherwise show it only when this team's next game is within this many hours, or a game is live. Completed games hide unless the next game is within the window. Hidden cards wake automatically; the editor remains visible.",
+  show_within_hours: "0 always shows the card. Otherwise show it near this team's next game, while live, or during the optional postgame window. Hidden cards wake automatically; the editor remains visible.",
+  show_after_hours: "When Show only within is greater than 0, keep the card visible for this many hours after a known game finish. 0 adds no postgame extension. Expiry is automatic and does not change which game is displayed.",
   live_default_view: "Collapsed shows the two score rows and period/clock. Click that header or its chevron to expand. Resets for each new game.",
   headshot_size: "Auto scales with the card width. Presets pin a fixed pixel size.",
   show_schedule_nav: "Adds previous/next game arrows to non-live cards. Returns to the automatic game after 60 seconds idle.",
@@ -249,15 +254,15 @@ function parseScore(scoreObj) {
   return { text: String(scoreObj), num: Number.isFinite(num) ? num : null };
 }
 
-function visibilityWindowHours(value) {
+function visibilityWindowHours(value, option = "show_within_hours") {
   if (value === undefined || value === null || (typeof value === "string" && !value.trim())) return 0;
   if ((typeof value !== "number" && typeof value !== "string") || !Number.isFinite(Number(value)) || Number(value) < 0) {
-    throw new Error("show_within_hours must be a non-negative number of hours (0 = always).");
+    throw new Error(option + " must be a non-negative number of hours (0 disables this setting).");
   }
   return Number(value);
 }
 
-function gameWindowVisibility(stateObj, hours, now = Date.now()) {
+function gameWindowVisibility(stateObj, hours, now = Date.now(), afterHours = 0) {
   if (!hours || !stateObj || ["unavailable", "unknown"].includes(stateObj.state)) return {hidden: false, delay: 60000};
   const attrs = stateObj.attributes || {};
   const competition = attrs.competition || {};
@@ -271,6 +276,16 @@ function gameWindowVisibility(stateObj, hours, now = Date.now()) {
   const live = !terminal && !(interrupted && !(period > 0)) &&
     (attrs.is_live === true || attrs.game_active === true || state === "in" || state === "live" || name === "STATUS_IN_PROGRESS");
   if (live) return {hidden: false, delay: 60000};
+  const parseStart = (value) => typeof value === "string" && /(?:Z|[+-]\d{2}:\d{2})$/i.test(value) ? Date.parse(value) : NaN;
+  // Use the selected team's authoritative finish, not the displayed game or
+  // this browser's first sighting of a final. Unknown finish means no extension.
+  const ended = parseStart(attrs.last_game_end);
+  const elapsed = now - ended;
+  const afterActive = afterHours > 0 && Number.isFinite(ended) && elapsed >= 0 && elapsed / 3600000 < afterHours;
+  const withPostgame = (result) => afterActive ? {
+    hidden: false,
+    delay: Math.max(1, Math.min(result.delay, afterHours * 3600000 - elapsed)),
+  } : result;
   let raw = attrs.next_game_start;
   const detail = [type.detail, type.shortDetail, type.description].filter(Boolean).join(" ");
   const knownTime = [competition, status, type].every((source) =>
@@ -281,13 +296,12 @@ function gameWindowVisibility(stateObj, hours, now = Date.now()) {
   if (raw === undefined && !terminal && knownTime && (state === "pre" || attrs.mode === "next")) raw = competition.date;
   // Require a zone, matching the server's UTC contract; never reinterpret a
   // zone-less feed timestamp in the dashboard user's local time zone.
-  const parseStart = (value) => typeof value === "string" && /(?:Z|[+-]\d{2}:\d{2})$/i.test(value) ? Date.parse(value) : NaN;
   const start = parseStart(raw);
-  if (!Number.isFinite(start) || (terminal && start === parseStart(competition.date))) return {hidden: true, delay: 60000};
+  if (!Number.isFinite(start) || (terminal && start === parseStart(competition.date))) return withPostgame({hidden: true, delay: 60000});
   const remaining = start - now;
   const hidden = remaining / 3600000 > hours || remaining < -6 * 3600000;
   const boundary = hidden && remaining > 0 ? remaining - hours * 3600000 : remaining + 6 * 3600000 + 1;
-  return {hidden, delay: Number.isFinite(boundary) && boundary > 0 ? Math.max(1, Math.min(60000, boundary)) : 60000};
+  return withPostgame({hidden, delay: Number.isFinite(boundary) && boundary > 0 ? Math.max(1, Math.min(60000, boundary)) : 60000});
 }
 
 function competitorRecord(competitor, teamPayload) {
@@ -908,7 +922,8 @@ class NhlLiveGameCard extends HTMLElement {
 
 
     const hours = visibilityWindowHours(config?.show_within_hours);
-    this.config = { ...CARD_DEFAULTS, ...(config || {}), show_within_hours: hours };
+    const afterHours = visibilityWindowHours(config?.show_after_hours, "show_after_hours");
+    this.config = { ...CARD_DEFAULTS, ...(config || {}), show_within_hours: hours, show_after_hours: afterHours };
     this._lastFingerprint = this._lastCompactFp = this._lastCompactHtml = this._lastLiveHtml = "";
 
     this._clearRefreshTimer();
@@ -2116,7 +2131,8 @@ class NhlLiveGameCard extends HTMLElement {
   _updateWindowVisibility(stateObj) {
     this._clearVisibilityTimer();
     const hours = this.config?.show_within_hours || 0;
-    const result = this.preview || this.editMode ? {hidden: false, delay: 60000} : gameWindowVisibility(stateObj, hours);
+    const result = this.preview || this.editMode ? {hidden: false, delay: 60000} :
+      gameWindowVisibility(stateObj, hours, Date.now(), this.config?.show_after_hours || 0);
     const changed = !!this._windowHidden !== result.hidden;
     this._windowHidden = result.hidden;
     this.hidden = result.hidden;

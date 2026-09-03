@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/julianrinaldi/nhl-live-scoreboard/releases/tag/v1.2.0) (2026-09-03)
+
+### Features
+
+- Add per-card `show_after_hours` in the visual editor and YAML. With `show_within_hours: 24` and `show_after_hours: 4`, the card is visible within 24 hours before a game, while live, and for four hours after its recorded finish.
+- Expire the post-game window automatically, even with local refresh disabled. Live games and an overlapping next-game window remain visible.
+- Derive finish times from explicit ESPN End of Game plays, with a persisted, approximate fallback only for a closely observed live-to-final transition. Dashboard refreshes and integration restarts do not start a new countdown.
+- Expose `last_game_end`, `last_game_end_event_id`, and `last_game_end_source`; never estimate a finish from kickoff or a later data modification timestamp.
+- Keep existing behavior by default: post-game zero/blank adds no extension, and pre-game zero/blank still means always visible. Automatic game selection and browsing remain unchanged.
+
+Update through HACS, restart Home Assistant, and refresh the dashboard once to load the new bundled card.
+
 ## [1.1.0](https://github.com/julianrinaldi/nhl-live-scoreboard/releases/tag/v1.1.0) (2026-09-03)
 
 ### Features

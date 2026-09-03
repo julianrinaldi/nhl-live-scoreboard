@@ -62,6 +62,7 @@ from .const import (
     TEAM_SEASON_STATS_TTL_SECONDS,
     USER_AGENT,
 )
+from .game_end import GameEndTracker
 from .types import (
     Competition,
     GamePeriod,
@@ -212,6 +213,9 @@ class NhlLiveScoreboardData:
     previous_event_id: str = ""
     next_event_id: str = ""
     next_game_start: str | None = None
+    last_game_end: str | None = None
+    last_game_end_event_id: str = ""
+    last_game_end_source: str = ""
     selected_competition: Competition | None = None
     period_context: PeriodContext = field(default_factory=dict)
     recent_plays: list[RecentPlay] = field(default_factory=list)
@@ -251,6 +255,8 @@ class NhlLiveScoreboardCoordinator(DataUpdateCoordinator[NhlLiveScoreboardData])
         self._fired_once_events: set[str] = set()
         self._score_high_water: dict[str, int] = {}
         self._event_baseline_ts: float | None = None
+        self._game_end_tracker = GameEndTracker(
+            hass, f"{DOMAIN}.{getattr(entry, 'entry_id', self.team_id)}.game_end", self.team_id)
         super().__init__(hass, _LOGGER, name=f"{DOMAIN}_{self.team_abbr}",
                          update_interval=timedelta(seconds=DEFAULT_SCAN_INTERVAL_SECONDS))
 
@@ -1604,6 +1610,15 @@ class NhlLiveScoreboardCoordinator(DataUpdateCoordinator[NhlLiveScoreboardData])
         prev_id, next_id, live_id, display_id, _ = self._select_event(events)
         data = await self._assemble_game_data(
             events, display_id, prev_id, next_id, live_id, schedule, live_bridge=True)
+        # Only authoritative polling updates finish metadata. Historical
+        # card navigation must never establish or restart a postgame window.
+        live_summary = self._live_summary_cache
+        end_metadata = await self._game_end_tracker.async_update(
+            events=events, current_id=data.display_event_id, current_comp=data.selected_competition,
+            current_summary=live_summary[1] if live_summary and live_summary[0] == data.display_event_id else {},
+            summary_cache=self._summary_cache, fetch_summary=self._get_summary)
+        for key, value in end_metadata.items():
+            setattr(data, key, value)
         self.update_interval = self._compute_update_interval(data, events)
         try:
             detected = self._detect_game_events(getattr(self, "data", None), data, self.team_id)

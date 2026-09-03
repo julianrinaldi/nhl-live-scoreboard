@@ -66,6 +66,51 @@ test("visibility hours default off, accept numeric hours, and reject malformed o
   for(const value of [-1,"-1",Infinity,"Infinity",NaN,true,false,{},[],"later"])assert.throws(()=>cardFor(h,fixture(),{show_within_hours:value}),/show_within_hours.*non-negative/);
   const number=h.EDITOR_SCHEMA.flatMap(s=>s.schema||[]).find(s=>s.name==="show_within_hours");assert.equal(number.selector.number.step,0.5);
 });
+test("postgame hours are optional, independently validated and editable in half-hour steps",()=>{
+  const h=harness();assert.equal(h.CARD_DEFAULTS.show_after_hours,0);
+  for(const value of [undefined,null,"", "  ",0,"0"])assert.equal(cardFor(h,fixture(),{show_after_hours:value}).config.show_after_hours,0);
+  for(const value of [0.5,"2.5",24])assert.equal(cardFor(h,fixture(),{show_after_hours:value}).config.show_after_hours,Number(value));
+  for(const value of [-1,"-1",Infinity,"Infinity",NaN,true,false,{},[],"later"])assert.throws(()=>cardFor(h,fixture(),{show_after_hours:value}),/show_after_hours.*non-negative/);
+  const number=h.EDITOR_SCHEMA.flatMap(s=>s.schema||[]).find(s=>s.name==="show_after_hours");assert.equal(number.selector.number.step,0.5);
+});
+test("postgame window uses an authoritative past finish and hides exactly at expiry",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();a.mode="final";a.is_live=false;a.next_game_start=null;
+  a.competition.status.type={state:"post",name:"STATUS_FINAL",completed:true};
+  const state={state:"game",attributes:a};
+  for(const [elapsed,hidden] of [[-1,true],[0,false],[3600000-1,false],[3600000,true],[3600000+1,true]]){
+    a.last_game_end=new Date(now-elapsed).toISOString();assert.equal(h.gameWindowVisibility(state,24,now,1).hidden,hidden);
+  }
+  for(const end of [undefined,null,"",true,"invalid","2026-04-12T11:00:00"]){a.last_game_end=end;assert.equal(h.gameWindowVisibility(state,24,now,1).hidden,true);}
+  a.last_game_end=new Date(now-1000).toISOString();assert.equal(h.gameWindowVisibility(state,24,now,0).hidden,true);
+  assert.equal(h.gameWindowVisibility(state,0,now,1).hidden,false);
+  a.last_game_end=null;assert.equal(h.gameWindowVisibility(state,0,now,1).hidden,false);
+});
+test("pre and post windows combine without changing game selection or overriding live visibility",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();a.mode="next";a.is_live=false;a.competition.status.type={state:"pre",name:"STATUS_SCHEDULED"};
+  a.next_game_start=new Date(now+3*3600000).toISOString();a.last_game_end=new Date(now-1000).toISOString();
+  const state={state:"game",attributes:a};assert.equal(h.gameWindowVisibility(state,1,now,1).hidden,false);
+  a.last_game_end=new Date(now-2*3600000).toISOString();a.next_game_start=new Date(now+3600000).toISOString();assert.equal(h.gameWindowVisibility(state,1,now,1).hidden,false);
+  a.next_game_start=null;assert.equal(h.gameWindowVisibility(state,1,now,1).hidden,true);
+  a.mode="live";a.is_live=true;a.competition.status.type={state:"in",name:"STATUS_IN_PROGRESS"};assert.equal(h.gameWindowVisibility(state,1,now,1).hidden,false);
+});
+test("postgame expiry timer hides without HA updates and releases popups and layout space",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();h.setNow(now);
+  a.mode="final";a.is_live=false;a.competition.status.type={state:"post",name:"STATUS_FINAL",completed:true};a.next_game_start=null;a.last_game_end=new Date(now-3600000+2000).toISOString();
+  const card=cardFor(h,a,{show_within_hours:24,show_after_hours:1});assert.equal(card.hidden,false);assert.equal(h.intervals.size,0);
+  let closed=0;card._destroyPlayerCardPopup=()=>{closed++;};card._destroyLineupPopup=()=>{closed++;};
+  const timer=h.timers.get(card._visibilityTimer);assert.equal(timer.delay,2000);h.timers.delete(card._visibilityTimer);h.setNow(now+2000);timer.fn();
+  assert.equal(card.hidden,true);assert.equal(card.getCardSize(),0);assert.equal(closed,2);assert.equal(card.events.at(-1).detail.value,false);
+});
+test("postgame timer chooses earlier pregame boundary and config, reconnect and navigation remain authoritative",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();h.setNow(now);
+  a.mode="final";a.is_live=false;a.competition.status.type={state:"post",name:"STATUS_FINAL",completed:true};a.next_game_start=new Date(now+3600000+1000).toISOString();a.last_game_end=new Date(now-3600000+2000).toISOString();
+  const card=cardFor(h,a,{show_within_hours:1,show_after_hours:1});assert.equal(h.timers.get(card._visibilityTimer).delay,1000);
+  h.setNow(now+2000);card.render();assert.equal(card.hidden,false); // Next-game window now qualifies after postgame expiry.
+  a.next_game_start=null;card._navOffset=1;card._navGameData={...fixture(),last_game_end:new Date(now+2000).toISOString()};card.render();assert.equal(card.hidden,true);
+  card.setConfig({entity:card.config.entity,show_within_hours:1,show_after_hours:2});assert.equal(card.hidden,false);
+  card.disconnectedCallback();assert.equal(h.timers.size,0);card.connectedCallback();assert.equal(h.timers.size,1);
+  card.setConfig({entity:card.config.entity,show_within_hours:0,show_after_hours:2});assert.equal(card.hidden,false);assert.equal(h.timers.size,0);
+});
 test("window uses next game, not retained final date, with inclusive threshold and pending grace",()=>{
   const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();
   a.is_live=false;a.mode="final";a.competition.status.type={state:"post",name:"STATUS_FINAL",completed:true};
