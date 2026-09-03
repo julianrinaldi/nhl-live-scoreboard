@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/julianrinaldi/nhl-live-scoreboard/compare/v1.2.0...v1.3.0) (2026-09-03)
+
+
+### Features
+
+* add configurable next-game visibility window ([9baef0c](https://github.com/julianrinaldi/nhl-live-scoreboard/commit/9baef0c4240dd3650eeff7e59bab3123dba5a5ee))
+* add persistent post-game card visibility window ([6ede202](https://github.com/julianrinaldi/nhl-live-scoreboard/commit/6ede202c375b61b1212dd0b160337b6fc6d9e574))
+* initial NHL live scoreboard integration and bundled card ([3e5dc1d](https://github.com/julianrinaldi/nhl-live-scoreboard/commit/3e5dc1dca4349f8f604c6d7533c81ae51d62cfe4))
+
+
+### Bug Fixes
+
+* verify upcoming NHL season and identify overtime finals ([e874a2d](https://github.com/julianrinaldi/nhl-live-scoreboard/commit/e874a2dabe34a5c32d7b872a54907c75409d1c6b))
+
 ## [1.2.0](https://github.com/julianrinaldi/nhl-live-scoreboard/releases/tag/v1.2.0) (2026-09-03)
 
 ### Features
