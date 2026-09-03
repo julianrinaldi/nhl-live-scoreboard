@@ -412,6 +412,43 @@ def test_merge_deduplicates_phases_and_rejects_wrong_year():
     assert [e["id"] for e in merged["events"]] == ["1", "2"]
 
 
+@pytest.mark.asyncio
+@pytest.mark.parametrize("metadata_mode", ["observed", "missing_requested", "stale_requested", "older_first_event"])
+async def test_offseason_schedule_uses_actual_upcoming_year(coordinator, monkeypatch, metadata_mode):
+    """ESPN advertises generic 2026 metadata alongside the 2026-27 schedule."""
+    now = datetime(2026, 9, 3, 16, tzinfo=UTC).timestamp()
+    monkeypatch.setattr("custom_components.nhl_live_scoreboard.coordinator.time.time", lambda: now)
+    default = fixture("schedule_nyr_default_20260903.json")
+    assert default["season"]["year"] == 2026
+    assert default["requestedSeason"]["year"] == 2027
+    if metadata_mode in {"missing_requested", "older_first_event"}:
+        default.pop("requestedSeason")
+    elif metadata_mode == "stale_requested":
+        default["requestedSeason"]["year"] = 2025
+    if metadata_mode == "older_first_event":
+        # Synthetic mixed-year response: do not mistake its first event for
+        # the effective season when most events belong to the upcoming year.
+        comp = fixture("summary_401803619_final.json")["header"]["competitions"][0]
+        default["events"].insert(0, {"id": comp["id"], "date": comp["date"],
+            "season": {"year": 2026}, "seasonType": {"type": 2}, "competitions": [comp]})
+    base = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/nyr/schedule"
+    responses = {
+        base: default,
+        f"{base}?season=2027&seasontype=1": fixture("schedule_nyr_preseason_2027.json"),
+        f"{base}?season=2027&seasontype=3": fixture("schedule_nyr_postseason_2027.json"),
+    }
+    coordinator._get_json = AsyncMock(side_effect=lambda url: copy.deepcopy(responses[url]))
+    schedule = await coordinator._fetch_schedule()
+    assert schedule["season"]["year"] == 2027
+    assert [e["id"] for e in schedule["events"]] == ["401879645", "401879649", "401891774", "401893730"]
+    assert {call.args[0] for call in coordinator._get_json.await_args_list} == set(responses)
+    assert coordinator._select_event(schedule["events"])[:4] == ("", "401879645", "", "401879645")
+    assert schedule["events"][0]["date"] == "2026-09-21T23:00Z"
+    # The effective season and its upcoming events also survive the cache.
+    assert await coordinator._fetch_schedule() == schedule
+    assert coordinator._get_json.await_count == 3
+
+
 @pytest.mark.parametrize(("offset", "expected"), [(-99, ("1", -1, False, True)), (0, ("2", 0, True, True)), (99, ("3", 1, True, False))])
 def test_game_navigation_clamps(offset, expected):
     assert C._event_at_offset([event(3, 24), event(1, -24), event(2, 0)], "2", offset) == expected

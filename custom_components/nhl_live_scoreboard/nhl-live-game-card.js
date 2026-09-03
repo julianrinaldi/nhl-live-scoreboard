@@ -2307,6 +2307,7 @@ class NhlLiveGameCard extends HTMLElement {
       homeScore.text,
       awayRecord,
       homeRecord,
+      JSON.stringify([attrs.period_context, competition?.status]),
       expanded ? "exp" : "col",
       canExpand ? this._upcomingDetailsFingerprint(attrs) : "",
       `nav:${this._navOffset}:${this._navHasPrev ? 1 : 0}${this._navHasNext ? 1 : 0}`,
@@ -2359,9 +2360,13 @@ class NhlLiveGameCard extends HTMLElement {
       awayScore.num != null &&
       homeScore.num != null &&
       homeScore.num > awayScore.num;
+    const finalContext = periodContext({...attrs, competition});
+    const finalSuffix = isFinal && (finalContext.is_shootout || finalContext.period > 3)
+      ? periodLabel(finalContext.period, finalContext) : "";
+    const finalDate = [when.date, finalSuffix].filter(Boolean).join(" · ");
     const finalMarker = `<div class="compact-final-marker">${
-      when.date
-        ? `<div class="compact-date compact-final-date">${when.date}</div>`
+      finalDate
+        ? `<div class="compact-date compact-final-date">${escapeHtml(finalDate)}</div>`
         : ""
     }</div>`;
     const postponedMarker = `<div class="compact-final-marker"><div class="compact-pill compact-pill-postponed">PPD</div></div>`;

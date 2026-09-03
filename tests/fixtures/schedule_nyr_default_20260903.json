@@ -1,0 +1,90 @@
+{
+  "season": {
+    "year": 2026,
+    "type": 4,
+    "name": "Off Season",
+    "displayName": "2025-26",
+    "half": 1
+  },
+  "requestedSeason": {
+    "year": 2027,
+    "type": 2,
+    "name": "Regular Season",
+    "displayName": "2026-27"
+  },
+  "team": {
+    "id": "13",
+    "abbreviation": "NYR",
+    "displayName": "New York Rangers"
+  },
+  "events": [
+    {
+      "id": "401891774",
+      "date": "2026-09-30T00:00Z",
+      "season": {
+        "year": 2027,
+        "displayName": "2026-27"
+      },
+      "seasonType": {
+        "id": "2",
+        "type": 2,
+        "name": "Regular Season",
+        "abbreviation": "reg"
+      },
+      "competitions": [
+        {
+          "id": "401891774",
+          "date": "2026-09-30T00:00Z",
+          "status": {
+            "clock": 0,
+            "displayClock": "0:00",
+            "period": 0,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Tue, September 29th at 8:00 PM EDT",
+              "shortDetail": "9/29 - 8:00 PM EDT"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "401893730",
+      "date": "2027-04-10T23:00Z",
+      "season": {
+        "year": 2027,
+        "displayName": "2026-27"
+      },
+      "seasonType": {
+        "id": "2",
+        "type": 2,
+        "name": "Regular Season",
+        "abbreviation": "reg"
+      },
+      "competitions": [
+        {
+          "id": "401893730",
+          "date": "2027-04-10T23:00Z",
+          "status": {
+            "clock": 0,
+            "displayClock": "0:00",
+            "period": 0,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Sat, April 10th at 7:00 PM EDT",
+              "shortDetail": "4/10 - 7:00 PM EDT"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

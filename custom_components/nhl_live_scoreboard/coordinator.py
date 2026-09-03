@@ -1181,8 +1181,20 @@ class NhlLiveScoreboardCoordinator(DataUpdateCoordinator[NhlLiveScoreboardData])
             default = await self._get_json(base)
             if not isinstance(default.get("events"), list):
                 raise UpdateFailed("ESPN schedule has no events list")
-            year = _safe_int(_dict(default.get("season")).get("year")) or datetime.now().year
-            default_type = _safe_int(_dict(default.get("season")).get("type"))
+            # During the NHL offseason ESPN's generic `season` still names
+            # the completed league year, while requestedSeason and the
+            # events describe the newly published upcoming schedule. Trust
+            # the effective schedule, not that stale league-wide metadata.
+            event_years = [_safe_int(_dict(_dict(event).get("season")).get("year"))
+                           for event in _list(default.get("events"))]
+            event_years = [year for year in event_years if year > 0]
+            requested = _dict(default.get("requestedSeason"))
+            year = _safe_int(requested.get("year"))
+            if not year or (event_years and year not in event_years):
+                year = (max(set(event_years), key=lambda value: (event_years.count(value), value))
+                        if event_years else _safe_int(_dict(default.get("season")).get("year")))
+            year = year or datetime.now().year
+            default_type = _safe_int(requested.get("type")) or _safe_int(_dict(default.get("season")).get("type"))
             first_event = _dict((_list(default.get("events")) or [{}])[0])
             default_type = _safe_int(_dict(first_event.get("seasonType")).get("type")) or default_type
             types = [value for value in (1, 2, 3) if value != default_type]

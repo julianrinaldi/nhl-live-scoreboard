@@ -13,6 +13,9 @@ fixtures retain actual IDs, numeric values, and ESPN's response structures.
 | `teams_20260903.json` | Current 32 NHL teams, including Utah Mammoth (ESPN ID 129764) |
 | `groups_20260903.json` | Current conference/division hierarchy and team IDs |
 | `standings_metropolitan_2026.json` | 2025–26 NYI, NJ, and NYR standings rows in ESPN order |
+| `schedule_nyr_default_20260903.json` | Actual default NYR response: generic season 2026/offseason, but requested season and 84 scheduled games belong to 2027; first and last games retained |
+| `schedule_nyr_preseason_2027.json` | 2026–27 NYR preseason response; first and last of four games retained, beginning September 21, 2026 |
+| `schedule_nyr_postseason_2027.json` | Actual empty 2026–27 postseason response with `requestedSeason: null` |
 
 ## Source endpoints
 
@@ -22,6 +25,9 @@ fixtures retain actual IDs, numeric values, and ESPN's response structures.
 - Standings: `https://site.api.espn.com/apis/v2/sports/hockey/nhl/standings?season=2026&seasontype=2`
 - Biography: `https://site.web.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/{ATHLETE_ID}?region=us&lang=en`
 - Statistics: `https://site.web.api.espn.com/apis/common/v3/sports/hockey/nhl/athletes/{ATHLETE_ID}/stats?region=us&lang=en`
+- Default schedule: `https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/nyr/schedule`
+- Preseason schedule: `https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/nyr/schedule?season=2027&seasontype=1`
+- Postseason schedule: `https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/nyr/schedule?season=2027&seasontype=3`
 
 Summary trimming retains headers, per-period scores, final goalie decisions,
 game leaders, on-ice data, team statistics, category schemas, and two athlete
@@ -31,6 +37,10 @@ The regulation fixture also retains two actual Roughing penalties, whose
 penalty type/minutes distinguish them without the literal word "penalty".
 Athlete statistics retain category schemas, the final two season rows,
 career totals, glossary, and team lookup. Biography retains profile fields.
+Schedule fixtures preserve season/requested-season metadata, event IDs, dates,
+event seasons, phase fields, and competition status. Unrelated team metadata
+and intermediate events are removed. Missing/stale requested-season metadata
+and an older first event are explicit synthetic mutations in the tests.
 
 Important feed semantics captured here:
 
@@ -42,6 +52,8 @@ Important feed semantics captured here:
 - ESPN's skater career `SOG` label is attached to `shootoutGoals`, not
   `shotsTotal`. Tests require machine-key mappings rather than label guesses.
 - Team records contain wins, losses, and overtime losses.
+- During the offseason the generic `season` metadata may lag the effective
+  `requestedSeason` and event years; it must not discard the upcoming schedule.
 
 Live, pregame, intermission, postponed, missing-data, malformed, and
 postseason multi-overtime cases are explicit synthetic tests. They are not

@@ -97,6 +97,39 @@ test("real shootout linescore preserves official totals and labelsSO",()=>{
   const card=cardFor(h,a);const html=card.renderLinescore(a.competition,null,a);
   assert.match(html,/>SO</);assert.doesNotMatch(html,/>2OT</);assert.match(html,/period-total">4</);assert.match(html,/period-total">3</);
 });
+for(const [name,file,period,shootout,suffix] of [
+  ["regulation final keeps its date-only marker","summary_401803619_final.json",3,false,""],
+  ["overtime final appends OT to its date marker","summary_401803625_overtime.json",4,false," · OT"],
+  ["explicit shootout final appends SO to its date marker","summary_401803626_shootout.json",5,true," · SO"],
+  ["playoff fifth period without shootout evidence appends 2OT","summary_401803625_overtime.json",5,false," · 2OT"],
+]){
+  test(name,()=>{
+    const h=harness(),a=fixture();
+    a.competition=JSON.parse(fs.readFileSync(path.join(__dirname,"fixtures",file),"utf8")).header.competitions[0];
+    a.is_live=false;a.mode="final";
+    a.period_context={period,is_shootout:shootout,display_clock:""};
+    if(suffix===" · 2OT"){
+      // Explicit synthetic playoff overtime; period 5 alone is never SO.
+      a.competition.seasonType=3;a.competition.status.period=5;
+      a.competition.status.type={state:"post",completed:true,name:"STATUS_FINAL",detail:"Final/2OT",shortDetail:"Final/2OT"};
+    }
+    const card=cardFor(h,a);
+    const marker=card.content.innerHTML.match(/class="compact-date compact-final-date">([^<]*)<\/div>/);
+    assert(marker);assert.equal(marker[1],card.formatCompactDateTime(a.competition.date).date+suffix);
+    assert.match(card.content.innerHTML,/compact-mode/);
+  });
+}
+test("status-only final metadata changes repaint the compact overtime marker",()=>{
+  const h=harness(),a=fixture();a.is_live=false;a.mode="final";a.period_context={};
+  a.competition.status={period:3,type:{state:"post",completed:true,name:"STATUS_FINAL",detail:"Final"}};
+  const card=cardFor(h,a),date=card.formatCompactDateTime(a.competition.date).date;
+  const marker=()=>card.content.innerHTML.match(/class="compact-date compact-final-date">([^<]*)<\/div>/)[1];
+  assert.equal(marker(),date);
+  a.competition.status={period:4,type:{state:"post",completed:true,name:"STATUS_FINAL_OT",detail:"Final/OT"}};
+  card.render();assert.equal(marker(),date+" · OT");
+  a.competition.status={period:5,type:{state:"post",completed:true,name:"STATUS_FINAL_SO",detail:"Final/SO"}};
+  card.render();assert.equal(marker(),date+" · SO");
+});
 test("historical linescore uses the earlier checkpoint and hides later periods",()=>{
   const h=harness(),a=fixture(),card=cardFor(h,a);
   const html=card.renderLinescore(a.competition,{period_context:{period:2},away_score:0,home_score:0},a);
@@ -205,6 +238,27 @@ test("an earlier period with an explicit blank countdown never inherits the live
   assert.equal(card._periodOffset,0);
   assert.doesNotMatch(card.content.innerHTML,/Earlier period/);
   assert.match(card.content.innerHTML,/5:00/);
+});
+test("an earlier regulation period explicitly opts out of the live shootout context",async()=>{
+  const h=harness(),a=fixture();
+  a.period_context={period:5,display_clock:"",display_period:"SO",is_shootout:true};
+  a.competition.status={period:5,displayClock:"0:00",type:{state:"in",name:"STATUS_SHOOTOUT",detail:"Shootout",shortDetail:"Final/SO"}};
+  const card=cardFor(h,a,{live_default_view:"expanded"});
+  assert.match(card.content.innerHTML,/>SO</);
+  card._hass.connection={sendMessagePromise:async()=>({
+    offset:-2,total_periods:5,is_current:false,has_prev:true,has_next:true,
+    away_score:1,home_score:1,
+    period_context:{period:3,display_clock:"",display_period:"3rd",is_shootout:false},
+    current_period:{id:"3",number:3,label:"3rd",play_count:1,goals:0,is_shootout:false},
+    recent_plays:[{id:"earlier",period:3,clock:"19:58",text:"Earlier shot saved",is_shootout:false}],
+  })};
+  card._navigatePeriod(-2);await tick();
+  assert.equal(card._periodOffset,-2);
+  assert.match(card.content.innerHTML,/Earlier period · P3<\/div>/);
+  assert.doesNotMatch(card.content.innerHTML,/>SO</);
+  card._navigatePeriod(2);
+  assert.equal(card._periodOffset,0);
+  assert.match(card.content.innerHTML,/>SO</);
 });
 test("stale period responses are discarded after resets",async()=>{
   const h=harness(),card=cardFor(h);let resolve;card._hass.connection={sendMessagePromise:()=>new Promise(r=>{resolve=r;})};card._navigatePeriod(-1);card._resetPeriodNav();resolve({offset:-1,recent_plays:[],current_period:{id:"old"}});await tick();assert.equal(card._periodOffset,0);assert.equal(card._periodView,null);

@@ -1,0 +1,85 @@
+{
+  "season": {
+    "year": 2026,
+    "type": 4,
+    "name": "Off Season",
+    "displayName": "2025-26",
+    "half": 1
+  },
+  "requestedSeason": {
+    "year": 2027,
+    "type": 1,
+    "name": "Preseason",
+    "displayName": "2026-27"
+  },
+  "events": [
+    {
+      "id": "401879645",
+      "date": "2026-09-21T23:00Z",
+      "season": {
+        "year": 2027,
+        "displayName": "2026-27"
+      },
+      "seasonType": {
+        "id": "1",
+        "type": 1,
+        "name": "Preseason",
+        "abbreviation": "pre"
+      },
+      "competitions": [
+        {
+          "id": "401879645",
+          "date": "2026-09-21T23:00Z",
+          "status": {
+            "clock": 0,
+            "displayClock": "0:00",
+            "period": 0,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Mon, September 21st at 7:00 PM EDT",
+              "shortDetail": "9/21 - 7:00 PM EDT"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "401879649",
+      "date": "2026-09-25T23:00Z",
+      "season": {
+        "year": 2027,
+        "displayName": "2026-27"
+      },
+      "seasonType": {
+        "id": "1",
+        "type": 1,
+        "name": "Preseason",
+        "abbreviation": "pre"
+      },
+      "competitions": [
+        {
+          "id": "401879649",
+          "date": "2026-09-25T23:00Z",
+          "status": {
+            "clock": 0,
+            "displayClock": "0:00",
+            "period": 0,
+            "type": {
+              "id": "1",
+              "name": "STATUS_SCHEDULED",
+              "state": "pre",
+              "completed": false,
+              "description": "Scheduled",
+              "detail": "Fri, September 25th at 7:00 PM EDT",
+              "shortDetail": "9/25 - 7:00 PM EDT"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
