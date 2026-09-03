@@ -25,6 +25,8 @@ Optional strength/empty-net and coordinates render only when available. Goalie/r
 
 ## Lifecycle and coexistence
 
+The optional per-card `show_within_hours` setting defaults to zero (always visible). A separate cached-schedule `next_game_start` attribute drives the window, even while a recent final remains selected. Valid pending starts have a six-hour grace; fresh final summaries override stale schedule status. Navigation never changes eligibility. Live games override the window, except terminal statuses or a pregame delay with no played period. Hidden cards declare `connectedWhileHidden`, announce native `card-visibility-changed` events, and keep a dedicated boundary timer capped at 60 seconds. Disconnect clears timers; reconnect/configuration changes re-evaluate them. Editor/preview and diagnostic errors bypass hiding. No new ESPN request is introduced.
+
 Setup copies the module into `www/community/nhl_live_scoreboard` when writable and registers its versioned `/hacsfiles/nhl_live_scoreboard/nhl-live-game-card.js` URL. An exact-file fallback at `/nhl_live_scoreboard/nhl-live-game-card.js` also works; Python source directories are not exposed.
 
 Storage-managed resources are created/updated; YAML-managed resources need manual setup. Refresh the browser after setup to load the module. No dashboard cards are automatically placed. MLB/NFL/NHL have separate domains, elements, popup caches/styles, resources, and event names.
