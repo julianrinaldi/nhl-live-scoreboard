@@ -77,6 +77,7 @@ def build_state_attributes(data: Any) -> dict[str, Any]:
         "live_event_id": data.live_event_id,
         "previous_event_id": data.previous_event_id,
         "next_event_id": data.next_event_id,
+        "next_game_start": data.next_game_start,
         "competition": data.selected_competition or {},
         "period_context": data.period_context,
         "recent_plays": recent_plays,

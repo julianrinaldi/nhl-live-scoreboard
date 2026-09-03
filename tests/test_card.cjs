@@ -10,16 +10,22 @@ function harness() {
   const timers = new Map(), intervals = new Map(), fetches = [];
   const elements = new Map([["mlb-live-game-card",class {}],["nfl-live-game-card",class {}]]);
   let serial = 0;
+  let now = Date.now();
+  class ClockDate extends Date {
+    constructor(...args) { super(...(args.length ? args : [now])); }
+    static now() { return now; }
+  }
   const context = {
-    console:{info(){},debug(){}},HTMLElement:class {},Element:class {},URL,window:{},
+    console:{info(){},debug(){}},HTMLElement:class {constructor(){this.style={};this.events=[];}dispatchEvent(event){this.events.push(event);return true;}},Element:class {},URL,window:{},Date:ClockDate,
+    CustomEvent:class {constructor(type,options){this.type=type;Object.assign(this,options);}},
     customElements:{get:name=>elements.get(name),define:(name,value)=>elements.set(name,value)},
     setTimeout:(fn,delay)=>{const id=++serial;timers.set(id,{fn,delay});return id;},clearTimeout:id=>timers.delete(id),
     setInterval:(fn,delay)=>{const id=++serial;intervals.set(id,{fn,delay});return id;},clearInterval:id=>intervals.delete(id),
     requestAnimationFrame(){},fetch:url=>{fetches.push(url);return Promise.reject(new Error("Offline fixture"));},
   };
   vm.createContext(context);
-  vm.runInContext(source+"\nglobalThis.api={Card:NhlLiveGameCard,CARD_DEFAULTS,CARD_CSS,EDITOR_SCHEMA,findNhlEntity,deepActiveElement,periodLabel,renderSituationRow,renderStrengthRow,renderRink,renderScoringPlaysPanel,renderRecentPlays,teamStatsTablesHtml,playerCardBodyHtml,goalieLines};",context);
-  return {...context.api,context,timers,intervals,elements,fetches};
+  vm.runInContext(source+"\nglobalThis.api={Card:NhlLiveGameCard,CARD_DEFAULTS,CARD_CSS,EDITOR_SCHEMA,findNhlEntity,deepActiveElement,periodLabel,renderSituationRow,renderStrengthRow,renderRink,renderScoringPlaysPanel,renderRecentPlays,teamStatsTablesHtml,playerCardBodyHtml,goalieLines,visibilityWindowHours,gameWindowVisibility};",context);
+  return {...context.api,context,timers,intervals,elements,fetches,setNow:value=>{now=value;}};
 }
 
 // Simulated live checkpoint using identities/stat keys from real NYR-DAL fixture.
@@ -52,6 +58,74 @@ function cardFor(h,attrs=fixture(),config={}) {
   card.setConfig({entity:"sensor.nhl_live_scoreboard_nyr",...config});card.render();return card;
 }
 const tick=async()=>{await Promise.resolve();await Promise.resolve();await Promise.resolve();};
+
+test("visibility hours default off, accept numeric hours, and reject malformed options",()=>{
+  const h=harness();assert.equal(h.CARD_DEFAULTS.show_within_hours,0);
+  for(const value of [undefined,null,"", "  ",0,"0"])assert.equal(h.visibilityWindowHours(value),0);
+  for(const value of [0.5,"2.5",24])assert.equal(h.visibilityWindowHours(value),Number(value));
+  for(const value of [-1,"-1",Infinity,"Infinity",NaN,true,false,{},[],"later"])assert.throws(()=>cardFor(h,fixture(),{show_within_hours:value}),/show_within_hours.*non-negative/);
+  const number=h.EDITOR_SCHEMA.flatMap(s=>s.schema||[]).find(s=>s.name==="show_within_hours");assert.equal(number.selector.number.step,0.5);
+});
+test("window uses next game, not retained final date, with inclusive threshold and pending grace",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();
+  a.is_live=false;a.mode="final";a.competition.status.type={state:"post",name:"STATUS_FINAL",completed:true};
+  const state={state:"game",attributes:a};
+  for(const [start,hidden] of [[now+24*3600000+1,true],[now+24*3600000,false],[now+3600000,false],[now-6*3600000,false],[now-6*3600000-1,true]]){
+    a.next_game_start=new Date(start).toISOString();assert.equal(h.gameWindowVisibility(state,24,now).hidden,hidden);
+  }
+  for(const value of [null,"invalid","2026-04-12T13:00:00",true]){a.next_game_start=value;assert.equal(h.gameWindowVisibility(state,24,now).hidden,true);}
+  assert.equal(h.gameWindowVisibility(state,0,now).hidden,false);
+});
+test("live and intermission remain visible but terminal and pregame-delay statuses override stale live flags",()=>{
+  const h=harness(),a=fixture(),state={state:"game",attributes:a};a.next_game_start=null;
+  for(const name of ["STATUS_IN_PROGRESS","STATUS_END_PERIOD","STATUS_DELAYED","STATUS_SUSPENDED"]){a.competition.status.type={state:"in",name};assert.equal(h.gameWindowVisibility(state,1).hidden,false);}
+  for(const name of ["STATUS_FINAL","STATUS_POSTPONED","STATUS_CANCELED"]){a.competition.status.type={state:"post",name};assert.equal(h.gameWindowVisibility(state,1).hidden,true);}
+  a.competition.status={period:0,type:{state:"in",name:"STATUS_DELAYED"}};a.period_context={period:0};assert.equal(h.gameWindowVisibility(state,1).hidden,true);
+  a.mode="final";a.competition.status.type={};assert.equal(h.gameWindowVisibility(state,1).hidden,true);
+});
+test("old backend scheduled fallback is bounded, validates time, and never overrides explicit null or finals",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();a.is_live=false;a.mode="next";
+  a.competition.date=new Date(now+3600000).toISOString();a.competition.status={type:{state:"pre",name:"STATUS_SCHEDULED"}};
+  const state={state:"game",attributes:a};assert.equal(h.gameWindowVisibility(state,2,now).hidden,false);
+  a.next_game_start=null;assert.equal(h.gameWindowVisibility(state,2,now).hidden,true);delete a.next_game_start;
+  for(const target of [a.competition,a.competition.status,a.competition.status.type]){
+    for(const key of ["timeValid","dateValid","isTBDFlex"]){target[key]=key==="isTBDFlex";assert.equal(h.gameWindowVisibility(state,2,now).hidden,true);delete target[key];}
+  }
+  for(const detail of ["TBD","TBA","Time to be determined","Time to be announced"]){a.competition.status.type.detail=detail;assert.equal(h.gameWindowVisibility(state,2,now).hidden,true);}
+  delete a.competition.status.type.detail;
+  a.mode="final";a.next_game_start=a.competition.date;assert.equal(h.gameWindowVisibility(state,2,now).hidden,true);
+  a.next_game_start=new Date(now+1.5*3600000).toISOString();assert.equal(h.gameWindowVisibility(state,2,now).hidden,false);
+});
+test("hidden cards announce native visibility, occupy no height, and wake without HA updates",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();h.setNow(now);
+  a.is_live=false;a.mode="next";a.competition.status.type={state:"pre",name:"STATUS_SCHEDULED"};a.next_game_start=new Date(now+3600000+2000).toISOString();
+  const card=cardFor(h,a,{show_within_hours:1});assert.equal(card.connectedWhileHidden,true);assert.equal(card.hidden,true);assert.equal(card.style.display,"none");assert.equal(card.getCardSize(),0);
+  assert.equal(card.events.length,1);assert.equal(card.events[0].type,"card-visibility-changed");assert.equal(card.events[0].detail.value,false);assert(card.events[0].bubbles&&card.events[0].composed);
+  const timer=h.timers.get(card._visibilityTimer);assert.equal(timer.delay,2000);h.timers.delete(card._visibilityTimer);h.setNow(now+2000);timer.fn();
+  assert.equal(card.hidden,false);assert.equal(card.style.display,"");assert.equal(card.getCardSize(),4);assert.equal(card.events.at(-1).detail.value,true);assert.match(card.content.innerHTML,/compact-mode/);
+  assert.equal(h.intervals.size,0);assert.equal(h.timers.get(card._visibilityTimer).delay,60000);
+});
+test("visibility changes before fingerprint shortcut, ignores navigation and closes dialogs when hiding",()=>{
+  const h=harness(),now=Date.parse("2026-04-12T12:00:00Z"),a=fixture();h.setNow(now);
+  const card=cardFor(h,a,{show_within_hours:1});let closed=0;card._destroyPlayerCardPopup=()=>{closed++;};card._destroyLineupPopup=()=>{closed++;};
+  card._navOffset=1;card._navGameData={...fixture(),next_game_start:new Date(now+1000).toISOString()};
+  a.is_live=false;a.mode="final";a.competition.status.type={state:"post",name:"STATUS_FINAL"};a.next_game_start=null;
+  card.render();assert.equal(card.hidden,true);assert.equal(card._navOffset,0);assert.equal(closed,2);
+  card.render();assert.equal(closed,2);assert.equal(card.events.length,1);
+  a.is_live=true;a.mode="live";a.competition.status.type={state:"in",name:"STATUS_IN_PROGRESS"};card.render();assert.equal(card.hidden,false);
+});
+test("hidden card edits, preview, diagnostics and reconnect restore appropriate visibility",()=>{
+  const h=harness(),a={league:"NHL",team_abbr:"NYR",display_event_id:"",mode:"idle",next_game_start:null};
+  const card=cardFor(h,a,{show_within_hours:24});assert.equal(card.hidden,true);
+  card.preview=true;assert.equal(card.hidden,false);card.preview=false;assert.equal(card.hidden,true);
+  card.editMode=true;assert.equal(card.hidden,false);card.editMode=false;assert.equal(card.hidden,true);
+  card._hass.states[card.config.entity].state="unavailable";card.render();assert.equal(card.hidden,false);assert.match(card.content.innerHTML,/temporarily unavailable/);
+  card.setConfig({entity:"sensor.missing",show_within_hours:24});assert.equal(card.hidden,false);assert.match(card.content.innerHTML,/Entity not found/);
+  card.setConfig({show_within_hours:24});assert.equal(card.hidden,false);assert.match(card.content.innerHTML,/Configure this card/);
+  card.setConfig({entity:"sensor.nhl_live_scoreboard_nyr",show_within_hours:24});card._hass.states[card.config.entity].state="idle";card.render();assert.equal(card.hidden,true);
+  card.disconnectedCallback();assert.equal(h.timers.size,0);card.connectedCallback();assert.equal(h.timers.size,1);
+  card.setConfig({entity:"sensor.nhl_live_scoreboard_nyr",show_within_hours:0});assert.equal(card.hidden,false);assert.equal(h.timers.size,0);
+});
 
 test("NHL element, cache, options and CSS coexist with MLB and NFL",()=>{
   const h=harness();for(const name of ["mlb-live-game-card","nfl-live-game-card","nhl-live-game-card","nhl-live-game-card-editor"])assert(h.elements.has(name));
@@ -273,7 +347,7 @@ test("profile and team-season requests deduplicate and cache",async()=>{
 });
 test("disconnect clears navigation and timers; reconnect rearms local refresh",()=>{
   const h=harness(),card=cardFor(h,fixture(),{refresh_rate:10});card._navOffset=2;card._navGameData=fixture();card._periodOffset=-1;card._periodView={recent_plays:[]};card._armNavIdleTimer();card._armPeriodIdleTimer();card._setupRefreshTimer();const nav=card._navGeneration,period=card._periodGeneration;
-  card.disconnectedCallback();assert.equal(card._navOffset,0);assert.equal(card._periodOffset,0);assert.equal(h.timers.size,0);assert.equal(h.intervals.size,0);assert(card._navGeneration>nav);assert(card._periodGeneration>period);card.hass=card._hass;assert.equal(h.intervals.size,1);
+  card.disconnectedCallback();assert.equal(card._navOffset,0);assert.equal(card._periodOffset,0);assert.equal(h.timers.size,0);assert.equal(h.intervals.size,0);assert(card._navGeneration>nav);assert(card._periodGeneration>period);card.connectedCallback();assert.equal(h.intervals.size,1);
 });
 test("native highlight anchors retain normal click and keyboard activation",()=>{
   const h=harness(),card=cardFor(h),anchor=new h.context.Element();anchor.closest=s=>s.includes("a[href]")?anchor:null;let prevented=0;const event={target:anchor,key:"Enter",preventDefault(){prevented++;},stopPropagation(){}};card._onContentClick(event);card._onContentKeydown(event);event.key=" ";card._onContentKeydown(event);assert.equal(prevented,0);

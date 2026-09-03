@@ -404,6 +404,79 @@ def test_recent_final_holds_then_next_game_and_stale_pregame_is_fetched(coordina
     assert coordinator._select_event([event(2, -1), event(3, 48)])[3] == "2"
 
 
+def test_visibility_start_is_independent_of_retained_final_and_normalized_to_utc(coordinator, monkeypatch):
+    now = datetime(2026, 4, 11, 21, tzinfo=UTC).timestamp()
+    monkeypatch.setattr("custom_components.nhl_live_scoreboard.coordinator.time.time", lambda: now)
+    previous, upcoming = event(1, -2, "post", "STATUS_FINAL"), event(2, 24)
+    upcoming["date"] = "2026-04-12T17:00:00-04:00"
+    assert coordinator._select_event([previous, upcoming])[3] == "1"
+    assert coordinator._next_game_start([upcoming, previous]) == "2026-04-12T21:00:00Z"
+    assert coordinator._next_game_start([previous]) is None
+
+
+@pytest.mark.parametrize("hours", [-6, -1, 0, 0.5, 24])
+def test_visibility_start_keeps_short_pending_grace(coordinator, monkeypatch, hours):
+    now = datetime(2026, 4, 11, 21, tzinfo=UTC).timestamp()
+    monkeypatch.setattr("custom_components.nhl_live_scoreboard.coordinator.time.time", lambda: now)
+    assert coordinator._next_game_start([event(1, hours)]) == datetime.fromtimestamp(now + hours * 3600, UTC).isoformat().replace("+00:00", "Z")
+    assert coordinator._next_game_start([event(1, -6.01)]) is None
+
+
+@pytest.mark.parametrize("kind", ["final", "cancelled", "postponed", "live", "wrong_team", "bad_date", "zone_less",
+                                  "date_invalid", "time_invalid", "comp_date_invalid", "comp_time_invalid", "tbd", "tbd_status",
+                                  "tbd_detail", "tbd_comp", "tbd_type", "tbd_event", "unknown_status", "final_name"])
+def test_visibility_start_skips_unusable_events(coordinator, monkeypatch, kind):
+    now = datetime(2026, 4, 11, 21, tzinfo=UTC).timestamp()
+    monkeypatch.setattr("custom_components.nhl_live_scoreboard.coordinator.time.time", lambda: now)
+    candidate, valid = event(1, 2), event(2, 24)
+    comp = candidate["competitions"][0]
+    if kind in {"final", "cancelled", "postponed", "live"}:
+        comp["status"]["type"] = {"state": "in" if kind == "live" else "post", "name": {
+            "final": "STATUS_FINAL", "cancelled": "STATUS_CANCELED", "postponed": "STATUS_POSTPONED", "live": "STATUS_IN_PROGRESS",
+        }[kind]}
+    elif kind == "wrong_team":
+        comp["competitors"] = [{"team": {"id": "999"}}]
+    elif kind in {"bad_date", "zone_less"}:
+        candidate["date"] = "invalid" if kind == "bad_date" else "2026-04-11T23:00:00"
+    elif kind in {"date_invalid", "time_invalid"}:
+        candidate["dateValid" if kind == "date_invalid" else "timeValid"] = False
+    elif kind in {"comp_date_invalid", "comp_time_invalid"}:
+        comp["dateValid" if kind == "comp_date_invalid" else "timeValid"] = False
+    elif kind == "tbd":
+        comp["status"]["isTBDFlex"] = True
+    elif kind == "tbd_status":
+        comp["status"]["type"]["name"] = "STATUS_TBD"
+    elif kind == "tbd_detail":
+        comp["status"]["type"]["detail"] = "Time to be announced"
+    elif kind == "tbd_comp":
+        comp["isTBDFlex"] = True
+    elif kind == "tbd_type":
+        comp["status"]["type"]["isTBDFlex"] = True
+    elif kind == "tbd_event":
+        candidate["isTBDFlex"] = True
+    elif kind == "unknown_status":
+        comp["status"]["type"] = {"state": "unknown", "name": "STATUS_ABANDONED"}
+    elif kind == "final_name":
+        comp["status"]["type"]["name"] = "STATUS_FINAL"
+    assert coordinator._next_game_start([candidate, valid]) == "2026-04-12T21:00:00Z"
+
+
+def test_visibility_start_uses_fresh_summary_status_over_stale_schedule(coordinator, monkeypatch):
+    now = datetime(2026, 4, 11, 21, tzinfo=UTC).timestamp()
+    monkeypatch.setattr("custom_components.nhl_live_scoreboard.coordinator.time.time", lambda: now)
+    current, upcoming = event(1, -2), event(2, 24)
+    final = competition("post", "STATUS_FINAL")
+    assert coordinator._next_game_start([current, upcoming], "1", final) == "2026-04-12T21:00:00Z"
+    assert coordinator._next_game_start([current], "1", final) is None
+    pregame_delay = competition("in", "STATUS_DELAYED", period=0)
+    pregame_delay["date"] = current["date"]
+    assert coordinator._next_game_start([current], "1", pregame_delay) == "2026-04-11T19:00:00Z"
+    rescheduled = competition("pre", "STATUS_SCHEDULED", period=0)
+    rescheduled["date"] = "2026-04-13T23:00:00Z"
+    assert coordinator._next_game_start([current, upcoming], "1", rescheduled) == "2026-04-12T21:00:00Z"
+    assert coordinator._next_game_start([current], "1", rescheduled) == "2026-04-13T23:00:00Z"
+
+
 def test_merge_deduplicates_phases_and_rejects_wrong_year():
     early, later = event(1, -24, phase=1), event(2, 24, phase=2)
     wrong = copy.deepcopy(later)

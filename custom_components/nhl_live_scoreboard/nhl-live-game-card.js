@@ -1,5 +1,5 @@
 const CARD_TAG = "nhl-live-game-card";
-const CARD_VERSION = "1.0.0"; // x-release-please-version
+const CARD_VERSION = "1.1.0"; // x-release-please-version
 const EDITOR_TAG = "nhl-live-game-card-editor";
 const INTEGRATION_DOMAIN = "nhl_live_scoreboard";
 const DOCS_URL = "https://github.com/julianrinaldi/nhl-live-scoreboard";
@@ -19,7 +19,7 @@ const CARD_DEFAULTS = {
   show_plays: true, show_play_results: true, show_period_summary: true,
   show_strength: true, show_rink: true, show_situation: true,
   show_win_probability: true, show_shot_chart: false, show_highlights: false,
-  refresh_rate: 0, player_link_target: "popup", show_team_stats_popup: true,
+  refresh_rate: 0, show_within_hours: 0, player_link_target: "popup", show_team_stats_popup: true,
   team_stats_default_view: "auto", show_schedule_nav: true, show_period_nav: true,
   live_default_view: "collapsed", headshot_size: "auto",
 };
@@ -44,6 +44,9 @@ const EDITOR_SCHEMA = [
   { type: "grid", schema: [
     { name: "refresh_rate", selector: { number: {
       min: 0, max: 300, step: 1, mode: "box", unit_of_measurement: "s",
+    } } },
+    { name: "show_within_hours", selector: { number: {
+      min: 0, step: 0.5, mode: "box", unit_of_measurement: "h",
     } } },
     selectSchema("player_link_target", [
       { value: "popup", label: "In-card career popup" },
@@ -76,6 +79,7 @@ const EDITOR_SCHEMA = [
 const EDITOR_LABELS = {
   entity: "NHL Live Scoreboard entity", title: "Card title (optional)",
   refresh_rate: "Refresh rate (s, 0 = HA updates)", player_link_target: "Player name click",
+  show_within_hours: "Show only within (hours, 0 = always)",
   team_stats_default_view: "Team stats popup default view",
   live_default_view: "Live game default view", headshot_size: "Headshot size",
   show_team_stats_popup: "Enable team statistics popup",
@@ -90,6 +94,7 @@ const EDITOR_LABELS = {
 const EDITOR_HELPERS = {
   entity: "Pick the sensor created by the NHL Live Scoreboard integration.",
   refresh_rate: "0 leaves refreshing to Home Assistant state updates. This only repaints the card; it does not change ESPN polling.",
+  show_within_hours: "0 always shows the card. Otherwise show it only when this team's next game is within this many hours, or a game is live. Completed games hide unless the next game is within the window. Hidden cards wake automatically; the editor remains visible.",
   live_default_view: "Collapsed shows the two score rows and period/clock. Click that header or its chevron to expand. Resets for each new game.",
   headshot_size: "Auto scales with the card width. Presets pin a fixed pixel size.",
   show_schedule_nav: "Adds previous/next game arrows to non-live cards. Returns to the automatic game after 60 seconds idle.",
@@ -242,6 +247,47 @@ function parseScore(scoreObj) {
   if (scoreObj == null || scoreObj === "") return { text: "", num: null };
   const num = Number(scoreObj);
   return { text: String(scoreObj), num: Number.isFinite(num) ? num : null };
+}
+
+function visibilityWindowHours(value) {
+  if (value === undefined || value === null || (typeof value === "string" && !value.trim())) return 0;
+  if ((typeof value !== "number" && typeof value !== "string") || !Number.isFinite(Number(value)) || Number(value) < 0) {
+    throw new Error("show_within_hours must be a non-negative number of hours (0 = always).");
+  }
+  return Number(value);
+}
+
+function gameWindowVisibility(stateObj, hours, now = Date.now()) {
+  if (!hours || !stateObj || ["unavailable", "unknown"].includes(stateObj.state)) return {hidden: false, delay: 60000};
+  const attrs = stateObj.attributes || {};
+  const competition = attrs.competition || {};
+  const status = competition.status || {};
+  const type = status.type || {};
+  const name = String(type.name || "").toUpperCase();
+  const state = String(type.state || "").toLowerCase();
+  const terminal = type.completed === true || state === "post" || attrs.mode === "final" || /FINAL|CANCEL|POSTPON/.test(name);
+  const interrupted = /DELAY|SUSPEND/.test(name) || attrs.is_delayed === true;
+  const period = Number(status.period || attrs.period_context?.period || 0);
+  const live = !terminal && !(interrupted && !(period > 0)) &&
+    (attrs.is_live === true || attrs.game_active === true || state === "in" || state === "live" || name === "STATUS_IN_PROGRESS");
+  if (live) return {hidden: false, delay: 60000};
+  let raw = attrs.next_game_start;
+  const detail = [type.detail, type.shortDetail, type.description].filter(Boolean).join(" ");
+  const knownTime = [competition, status, type].every((source) =>
+    source.dateValid !== false && source.timeValid !== false && source.isTBDFlex !== true) &&
+    !/TBD|TBA/.test(name) && !/\b(?:TBD|TBA)\b|to be determined|to be announced/i.test(detail);
+  // During a card/backend upgrade, only an absent attribute can fall back to
+  // a known scheduled date. Explicit null means the schedule has no next game.
+  if (raw === undefined && !terminal && knownTime && (state === "pre" || attrs.mode === "next")) raw = competition.date;
+  // Require a zone, matching the server's UTC contract; never reinterpret a
+  // zone-less feed timestamp in the dashboard user's local time zone.
+  const parseStart = (value) => typeof value === "string" && /(?:Z|[+-]\d{2}:\d{2})$/i.test(value) ? Date.parse(value) : NaN;
+  const start = parseStart(raw);
+  if (!Number.isFinite(start) || (terminal && start === parseStart(competition.date))) return {hidden: true, delay: 60000};
+  const remaining = start - now;
+  const hidden = remaining / 3600000 > hours || remaining < -6 * 3600000;
+  const boundary = hidden && remaining > 0 ? remaining - hours * 3600000 : remaining + 6 * 3600000 + 1;
+  return {hidden, delay: Number.isFinite(boundary) && boundary > 0 ? Math.max(1, Math.min(60000, boundary)) : 60000};
 }
 
 function competitorRecord(competitor, teamPayload) {
@@ -839,6 +885,14 @@ function teamStatsTablesHtml(team, view, seasonStats) {
 
 class NhlLiveGameCard extends HTMLElement {
 
+  // Home Assistant otherwise detaches a hidden card, stopping its wake timer.
+  connectedWhileHidden = true;
+
+  get preview() { return this._preview === true; }
+  set preview(value) { this._preview = value === true; this.render(); }
+  get editMode() { return this._editMode === true; }
+  set editMode(value) { this._editMode = value === true; this.render(); }
+
 
   static getConfigElement() {
     return document.createElement(EDITOR_TAG);
@@ -853,10 +907,12 @@ class NhlLiveGameCard extends HTMLElement {
 
 
 
-    this.config = { ...CARD_DEFAULTS, ...(config || {}) };
+    const hours = visibilityWindowHours(config?.show_within_hours);
+    this.config = { ...CARD_DEFAULTS, ...(config || {}), show_within_hours: hours };
     this._lastFingerprint = this._lastCompactFp = this._lastCompactHtml = this._lastLiveHtml = "";
 
     this._clearRefreshTimer();
+    this._clearVisibilityTimer();
 
     this._resetScheduleNav();
 
@@ -868,6 +924,10 @@ class NhlLiveGameCard extends HTMLElement {
 
     this._navAnchorId = undefined;
     this._periodAnchorKey = undefined;
+    if (this.content && this._hass) {
+      this.render();
+      this._setupRefreshTimer();
+    }
   }
 
 
@@ -2012,6 +2072,7 @@ class NhlLiveGameCard extends HTMLElement {
 
   _setupRefreshTimer() {
     this._clearRefreshTimer();
+    if (this._visibilityDisconnected) return;
     const rate = Number(this.config.refresh_rate);
     if (rate > 0 && this._hass) {
       this._refreshInterval = setInterval(() => {
@@ -2029,6 +2090,8 @@ class NhlLiveGameCard extends HTMLElement {
   }
 
   disconnectedCallback() {
+    this._visibilityDisconnected = true;
+    this._clearVisibilityTimer();
     this._clearRefreshTimer();
     // Invalidate pending navigation and leave reconnect on the current game.
     // Merely clearing idle timers would strand an old game/period indefinitely.
@@ -2039,7 +2102,48 @@ class NhlLiveGameCard extends HTMLElement {
     this._destroyLineupPopup();
   }
 
+  connectedCallback() {
+    this._visibilityDisconnected = false;
+    this.render();
+    if (this.config) this._setupRefreshTimer();
+  }
+
+  _clearVisibilityTimer() {
+    if (this._visibilityTimer) clearTimeout(this._visibilityTimer);
+    this._visibilityTimer = null;
+  }
+
+  _updateWindowVisibility(stateObj) {
+    this._clearVisibilityTimer();
+    const hours = this.config?.show_within_hours || 0;
+    const result = this.preview || this.editMode ? {hidden: false, delay: 60000} : gameWindowVisibility(stateObj, hours);
+    const changed = !!this._windowHidden !== result.hidden;
+    this._windowHidden = result.hidden;
+    this.hidden = result.hidden;
+    this.style.display = result.hidden ? "none" : "";
+    if (changed) {
+      this._lastFingerprint = this._lastCompactFp = this._lastCompactHtml = this._lastLiveHtml = "";
+      if (result.hidden) {
+        this._destroyPlayerCardPopup();
+        this._destroyLineupPopup();
+        this._resetScheduleNav();
+        this._resetPeriodNav();
+      }
+      this.dispatchEvent(new CustomEvent("card-visibility-changed", {
+        detail: {value: !result.hidden}, bubbles: true, composed: true,
+      }));
+    }
+    if (hours > 0 && !this._visibilityDisconnected) {
+      this._visibilityTimer = setTimeout(() => {
+        this._visibilityTimer = null;
+        this.render();
+      }, result.delay);
+    }
+    return !result.hidden;
+  }
+
   _restoreCardFocus(previous, selector, attribute, value) {
+    if (this._windowHidden) return;
     // isConnected works through Home Assistant's shadow roots; document.contains
     // does not. If a live repaint replaced the opener, restore its logical twin.
     if (previous && previous.isConnected) {
@@ -2079,7 +2183,7 @@ class NhlLiveGameCard extends HTMLElement {
   }
 
   getCardSize() {
-    return 4;
+    return this._windowHidden ? 0 : 4;
   }
 
 
@@ -2122,11 +2226,14 @@ class NhlLiveGameCard extends HTMLElement {
 
   render() {
     if (!this._hass || !this.config || !this.content) return;
+    const stateObj = this.config.entity ? this._hass.states[this.config.entity] : null;
+    // Evaluate the actual team's state before navigation and before memoized
+    // HTML can short-circuit. Time alone can open this window while hidden.
+    if (!this._updateWindowVisibility(stateObj)) return;
     if (!this.config.entity) {
       this.content.innerHTML = '<div class="empty">Configure this card — choose an NHL Live Scoreboard entity.</div>';
       return;
     }
-    const stateObj = this._hass.states[this.config.entity];
     if (!stateObj) {
       this.content.innerHTML = '<div class="empty">Entity not found: ' + escapeHtml(this.config.entity) + '</div>';
       return;

@@ -78,7 +78,7 @@ If the card is missing from the picker, refresh the dashboard after setting up t
 ```yaml
 lovelace:
   resources:
-    - url: /hacsfiles/nhl_live_scoreboard/nhl-live-game-card.js?v=100
+    - url: /hacsfiles/nhl_live_scoreboard/nhl-live-game-card.js?v=110
       type: module
 ```
 
@@ -91,6 +91,7 @@ Do not replace other resources or dashboards.
 | `entity` | required | NHL scoreboard sensor |
 | `title` | `""` | Upstream-compatible; no separate title heading is rendered |
 | `refresh_rate` | `0` | Local repaint seconds; does not control feed polling |
+| `show_within_hours` | `0` | Optional per-card visibility window; `0` always shows, positive hours show only near the next game or while live |
 | `show_matchup` | `true` | Goalie matchup or Game Leaders |
 | `show_records` | `true` | Win-loss-overtime-loss records on compact pregame/final cards |
 | `show_linescore` | `false` | Period goals and shots on goal in the expanded live view |
@@ -112,6 +113,20 @@ Do not replace other resources or dashboards.
 | `headshot_size` | `auto` | `auto`, `small` (40px), `medium` (56px), `large` (72px), `xlarge` (88px) |
 
 Expansion resets to the configured default for a new game. Schedule navigation returns to the automatically selected game after 60 seconds of inactivity; period navigation returns to the current period after 20 seconds.
+
+### Optional game-time visibility
+
+Set `show_within_hours: 24` to hide this card when the team's next game is more than 24 hours away, or no usable next start is available. It appears automatically as the window opens, without a page refresh, even with `refresh_rate: 0`. The default `0` leaves existing dashboards unchanged. Decimal hours are accepted; the visual editor uses half-hour steps.
+
+Live games, intermissions, and in-progress delays stay visible. A completed game hides unless the next game is within the window; this option changes visibility only, so the normal recent-result display may remain when the card is visible. Browsing another game or period does not change eligibility. Cancelled, postponed, completed, and unknown-time schedule entries are excluded. A scheduled start may remain eligible for up to six hours after its timestamp while awaiting a live/final feed update; a pregame delay is not automatically treated as live.
+
+Hidden cards remain connected and check the boundary at least once per minute while the dashboard is active. Browser background throttling may delay wake-up. The card stays visible in the editor/preview, and missing-entity or unavailable-data messages remain visible for troubleshooting. This is a per-card setting; it does not alter polling, sensors, or automations.
+
+```yaml
+type: custom:nhl-live-game-card
+entity: sensor.nhl_live_scoreboard_nyr
+show_within_hours: 24
+```
 
 Period plays are newest-first inside a keyboard-scrollable panel capped at 320px, keeping the dashboard compact while retaining the complete available period history.
 
@@ -174,6 +189,8 @@ For **When my team wins**:
 Options actions use top-level variables such as `team_score`; event automations use `trigger.event.data.team_score`.
 
 ## Sensor State Attributes
+
+`next_game_start` is the next usable selected-team schedule start as a UTC ISO timestamp, or `null`. It is independent of the displayed game's date and is derived from the existing schedule cache, without additional polling.
 
 The state is the ESPN event ID, or `idle`. Attributes include `game_active`, `mode`, `is_live`, `status_text`, `competition`, `period_context`, `goalies`, `situation`, `current_period`, `recent_plays`, `scoring_plays`, `team_stats`, `leaders`, and `division_standings`.
 
